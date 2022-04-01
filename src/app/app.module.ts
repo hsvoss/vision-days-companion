@@ -9,8 +9,9 @@ import {DayOneComponent} from './components/day-one/day-one.component';
 import {DayTwoComponent} from './components/day-two/day-two.component';
 import {DayThreeComponent} from './components/day-three/day-three.component';
 import {HomeComponent} from './components/home/home.component';
-import {NavigationComponent} from './components/navigation/navigation.component';
-import {SideDrawerComponent} from "./components/side-nav/side-drawer.component";
+import {NavigationComponent} from './components/technical/navigation/navigation.component';
+import {SideDrawerComponent} from "./components/technical/side-nav/side-drawer.component";
+import {SessionComponent} from './components/technical/sesion/session.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {SideDrawerComponent} from "./components/side-nav/side-drawer.component";
     DayThreeComponent,
     HomeComponent,
     NavigationComponent,
-    SideDrawerComponent
+    SideDrawerComponent,
+    SessionComponent
   ],
   imports: [
     BrowserModule,
