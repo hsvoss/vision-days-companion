@@ -1,0 +1,31 @@
+@import "src/colors";
+
+:host {
+  margin: 1vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 1vh;
+  border: 1vh solid $blue-light;
+  border-radius: 1vh;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .time {
+    margin: 1vh 1vw;
+    color: gray;
+  }
+
+}
+
+.speaker {
+  margin: 1vh 1vw;
+  align-self: flex-end;
+  color: gray;
+}
