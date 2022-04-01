@@ -1,0 +1,48 @@
+@import "src/colors";
+
+.logo {
+  height: 5vh;
+  padding: 0.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: space-around;
+  align-content: stretch;
+  background: transparent;
+
+
+  img {
+    height: 94vh;
+    width: 5vw;
+  }
+
+  .main {
+    flex-grow: 2;
+    width: 60vw;
+    height: 94vh;
+    overflow-y: scroll;
+    /* hide scrollbar but allow scrolling */
+
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+  }
+
+  app-navigation {
+    flex-grow: 2;
+    height: 94vh;
+    width: 30vw;
+  }
+}
+
+.blue-lightest {
+  background: $blue-lightest;
+}

@@ -1,0 +1,33 @@
+@import "src/colors";
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+  background: $blue-dark;
+  width: 100%;
+  height: 100%;
+
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blue-medium;
+    height: 6vh;
+    color: white;
+    border: 1vh solid $blue-light;
+    border-radius: 1vh;
+    font-size: 3vh;
+    margin-right: 2vh;
+    margin-left: 1vh;
+
+    &.active, &:hover {
+      background: white;
+      color: $blue-dark;
+      font-weight: bold;
+      border-color: $blue-medium;
+    }
+  }
+}

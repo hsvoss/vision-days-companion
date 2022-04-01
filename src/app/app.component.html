@@ -1,8 +1,20 @@
-<nav>
-  <a class="button" routerLink="/">Home</a> |
-  <a class="button" routerLink="/day-one">18. Mai</a> |
-  <a class="button" routerLink="/day-two">19. Mai</a> |
-  <a class="button" routerLink="/day-three">20. Mai</a> |
-</nav>
-
-<router-outlet></router-outlet>
+<div class="logo">
+  <img alt="Logo" height="100%" src="/assets/theme/Vision-Days.png">
+  <span (click)="toggleSidebar()" *ngIf="!widescreenMode" style="cursor: pointer;">
+    <img alt="menu" height="100%" src="/assets/icons/burger.svg">
+  </span>
+</div>
+<div class="horizontal blue-lightest">
+  <img alt="right" src="assets/theme/left.svg" style="z-index: 1002">
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+  <img alt="right" src="assets/theme/right.svg">
+  <app-navigation *ngIf="widescreenMode"></app-navigation>
+  <app-side-drawer>
+    <div class="horizontal">
+      <img alt="right" src="assets/theme/right.svg">
+      <app-navigation></app-navigation>
+    </div>
+  </app-side-drawer>
+</div>
