@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {PromptUpdateService} from "./services/prompt-update.service";
-import {LogUpdateService} from "./services/log-update.service";
 import {CheckForUpdateService} from "./services/check-for-update.service";
+import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
+import {DrawerService} from "./services/drawer.service";
 
 @Component({
   selector: 'app-root',
@@ -9,24 +10,24 @@ import {CheckForUpdateService} from "./services/check-for-update.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'vision-days-companion';
+  widescreenMode: boolean = true;
 
-  constructor(private promptUpdateService: PromptUpdateService, private logUpdateService: LogUpdateService, private checkForUpdateService: CheckForUpdateService) {
-    // constructor(promptUpdateService:PromptUpdateService, logUpdateService: LogUpdateService, checkForUpdateService :CheckForUpdateService) {
+  constructor(private promptUpdateService: PromptUpdateService,
+              private checkForUpdateService: CheckForUpdateService,
+              public breakpointObserver: BreakpointObserver,
+              private navigationService: DrawerService) {
   }
+
 
   ngOnInit() {
-
-    // if (this.swUpdate.isEnabled) {
-    //
-    //   this.swUpdate.available.subscribe(() => {
-    //
-    //     if(confirm("New version available. Load New Version?")) {
-    //
-    //       window.location.reload();
-    //     }
-    //   });
-    // }
+    this.breakpointObserver
+      .observe(['(min-width: 980px)'])
+      .subscribe((state: BreakpointState) => {
+        this.widescreenMode = state.matches;
+      });
   }
 
+  toggleSidebar() {
+    this.navigationService.toggleDrawer()
+  }
 }

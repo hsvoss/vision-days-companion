@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/colors";
+
+body {
+  margin: 0;
+  font-family: "URW Dock bold", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 3vh;
+  //overflow: hidden;
+
+}
+
+
+.card {
+  margin: 1vh;
+  padding: 1vh;
+  border: 1vh solid $blue-light;
+  border-radius: 1vh;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+
+}

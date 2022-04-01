@@ -9,6 +9,8 @@ import {DayOneComponent} from './components/day-one/day-one.component';
 import {DayTwoComponent} from './components/day-two/day-two.component';
 import {DayThreeComponent} from './components/day-three/day-three.component';
 import {HomeComponent} from './components/home/home.component';
+import {NavigationComponent} from './components/navigation/navigation.component';
+import {SideDrawerComponent} from "./components/side-nav/side-drawer.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {HomeComponent} from './components/home/home.component';
     DayOneComponent,
     DayTwoComponent,
     DayThreeComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent,
+    SideDrawerComponent
   ],
   imports: [
     BrowserModule,
@@ -31,4 +35,5 @@ import {HomeComponent} from './components/home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
