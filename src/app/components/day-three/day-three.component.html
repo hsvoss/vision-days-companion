@@ -1,16 +1,32 @@
-<div class="card">
-  <h1>Tagespunkt 1</h1>
-  <p>13:00 - 14:00 Uhr</p>
-</div>
-<div class="card">
-  <h1>Tagespunkt 2</h1>
-  <p>13:00 - 14:00 Uhr</p>
-</div>
-<div class="card">
-  <h1>Tagespunkt 3</h1>
-  <p>13:00 - 14:00 Uhr</p>
-</div>
-<div class="card">
-  <h1>Tagespunkt 4</h1>
-  <p>13:00 - 14:00 Uhr</p>
-</div>
+<app-session heading="Bereichsmeeting" start="9:00" end="12:00">
+  <app-tabs>
+    <app-tab tabTitle="BO">
+      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
+      </app-session>
+    </app-tab>
+    <app-tab tabTitle="BC">
+      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
+      </app-session>
+    </app-tab>
+    <app-tab tabTitle="ITC">
+      <app-session heading="Festsetzung" start="30 min"
+                   speaker="Hans Frömel">
+      </app-session>
+      <app-session heading="Penetration Tests" start="1 h"
+                   speaker="Faycal Sabbane">
+      </app-session>
+      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
+      </app-session>
+      <app-session heading="Hello Android" start="30 min"
+                   speaker="Catharina Schwarz">
+      </app-session>
+    </app-tab>
+  </app-tabs>
+</app-session>
+
+<app-session heading="Zusammenfassung & Ausblick" start="12:00" end="13:00"
+             speaker="???">
+</app-session>
+
+<app-session heading="Fingerfood & Abreise" style="background-color: #FFFFDEFF" start="13:00" end="14:00">
+</app-session>

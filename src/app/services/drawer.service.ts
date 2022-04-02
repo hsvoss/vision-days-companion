@@ -7,12 +7,13 @@ import {Router} from '@angular/router';
 })
 export class DrawerService implements OnInit {
 
+  // private showDrawer$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(window.innerWidth < 980);
   private showDrawer$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor(private router: Router) {
-    router.events.subscribe(() => {
-      this.setShowDrawer(false);
-    });
+    // router.events.subscribe(() => {
+    //   this.setShowDrawer(false);
+    // });
   }
 
   ngOnInit() {

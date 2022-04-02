@@ -12,6 +12,8 @@ import {HomeComponent} from './components/home/home.component';
 import {NavigationComponent} from './components/technical/navigation/navigation.component';
 import {SideDrawerComponent} from "./components/technical/side-nav/side-drawer.component";
 import {SessionComponent} from './components/technical/sesion/session.component';
+import {TabsComponent} from './components/technical/tabs/tabs.component';
+import {TabComponent} from './components/technical/tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {SessionComponent} from './components/technical/sesion/session.component'
     HomeComponent,
     NavigationComponent,
     SideDrawerComponent,
-    SessionComponent
+    SessionComponent,
+    TabsComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,

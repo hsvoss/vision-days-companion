@@ -1,19 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Component} from '@angular/core';
+import {DrawerService} from "../../../services/drawer.service";
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 
-  constructor(private router: Router) {
-
-
+  constructor(private drawerService: DrawerService) {
   }
 
-  ngOnInit(): void {
+  onClick() {
+    this.drawerService.setShowDrawer(false)
   }
-
 }
