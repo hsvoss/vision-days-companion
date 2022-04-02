@@ -8,7 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class SessionComponent implements OnInit {
 
   @Input() heading: string = "";
-  @Input() time: string = "";
+  @Input() start: string = "";
+  @Input() end: string = "";
   @Input() speaker: string = "";
 
 
