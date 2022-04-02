@@ -9,11 +9,33 @@
 
 </app-session>
 
-<app-session heading="Bereichsmeeting" start="14:00" end="18:00"><p>
-  tbd <br>
-  . <br>
-  . <br>
-  .</p>
+<app-session heading="Bereichsmeeting" start="14:00" end="18:00">
+  <app-tabs>
+    <app-tab tabTitle="BO">
+      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
+      </app-session>
+    </app-tab>
+    <app-tab tabTitle="BC">
+      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
+      </app-session>
+    </app-tab>
+    <app-tab tabTitle="ITC">
+      <app-session heading="Stand des Fachbereiches" start="30 min"
+                   speaker="Matthias Dannenberg">
+      </app-session>
+      <app-session heading="Webscraping mit Cypress" start="45 min"
+                   speaker="Lutz Liebig">
+      </app-session>
+
+      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
+      </app-session>
+
+      <app-session heading="Gradle" start="30 min"
+                   speaker="Roman Radev">
+      </app-session>
+
+    </app-tab>
+  </app-tabs>
 </app-session>
 
 <app-session heading="Ideenmanagement" speaker="Anreas & Niels" start="18:00" end="19:00">
@@ -22,8 +44,9 @@
   <!--  </p>-->
 </app-session>
 
-<app-session heading="Abendessen" style="background-color: #FFFFDEFF" start="19:00" end="20:00">
-  <p>Buffet im Hotel</p>
+<app-session heading="Abendessen" style="background-color: #FFFFDEFF"
+             speaker="Buffet im Hotel"
+             start="19:00" end="20:00">
 </app-session>
 
 <app-session heading="Bar" speaker="Uwe & Niels" start="20:00" end="open end">

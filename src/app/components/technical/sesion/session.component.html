@@ -3,7 +3,7 @@
   <div class="time">{{start}}</div>
 </div>
 <ng-content></ng-content>
-<div class="footer">
+<div class="footer" *ngIf="speaker || end">
   <div></div>
   <div class="speaker" *ngIf="speaker">{{speaker}}</div>
   <div class="time">{{end}}</div>
