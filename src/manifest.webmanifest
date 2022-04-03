@@ -1,7 +1,7 @@
 {
   "name": "Vision Days 2022",
   "short_name": "Vision Days",
-  "theme_color": "#1976d2",
+  "theme_color": "#009CDE",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
