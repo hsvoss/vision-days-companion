@@ -16,6 +16,7 @@ import {TabsComponent} from './components/technical/tabs/tabs.component';
 import {TabComponent} from './components/technical/tab/tab.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SessionComponent} from './components/technical/session/session.component';
+import {ImpressumComponent} from './components/impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {SessionComponent} from './components/technical/session/session.component
     BlockComponent,
     TabsComponent,
     TabComponent,
-    SessionComponent
+    SessionComponent,
+    ImpressumComponent
   ],
   imports: [
     BrowserModule,

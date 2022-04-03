@@ -1,18 +1,23 @@
 <nav>
-  <button routerLink="/" routerLinkActive="active"
-          [routerLinkActiveOptions]={exact:true} (click)="onClick()">
-    Home
-  </button>
-  <button routerLink="/day-one" routerLinkActive="active"
-          [routerLinkActiveOptions]={exact:true} (click)="onClick()">
-    18. Mai
-  </button>
-  <button routerLink="/day-two" routerLinkActive="active"
-          [routerLinkActiveOptions]={exact:true} (click)="onClick()">
-    19. Mai
-  </button>
-  <button routerLink="/day-three" routerLinkActive="active"
-          [routerLinkActiveOptions]={exact:true} (click)="onClick()">
-    20. Mai
-  </button>
+  <div>
+
+    <button routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]={exact:true} (click)="onClick()">
+      Home
+    </button>
+    <button routerLink="/day-one" routerLinkActive="active"
+            [routerLinkActiveOptions]={exact:true} (click)="onClick()">
+      18. Mai
+    </button>
+    <button routerLink="/day-two" routerLinkActive="active"
+            [routerLinkActiveOptions]={exact:true} (click)="onClick()">
+      19. Mai
+    </button>
+    <button routerLink="/day-three" routerLinkActive="active"
+            [routerLinkActiveOptions]={exact:true} (click)="onClick()">
+      20. Mai
+    </button>
+  </div>
+  <a routerLink="/impressum" routerLinkActive="active"
+     [routerLinkActiveOptions]={exact:true}>Impressum</a>
 </nav>
