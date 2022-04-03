@@ -1,8 +1,6 @@
 @import "src/colors";
 
-
 :host {
-  //margin: 1vh;
   border: 1vh solid $blue-light;
   border-radius: 1vh;
   background: white;
@@ -53,6 +51,10 @@
 
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
 .collapsible {
   overflow: hidden;

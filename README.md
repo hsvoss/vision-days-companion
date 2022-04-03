@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ac157b20-ae3c-4c55-8aad-c86e39ccfe9f/deploy-status)](https://app.netlify.com/sites/vision-days/deploys)
 
-# VisionDaysCompanion
+# VisionDays2022
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
