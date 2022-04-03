@@ -10,10 +10,12 @@ import {DayTwoComponent} from './components/day-two/day-two.component';
 import {DayThreeComponent} from './components/day-three/day-three.component';
 import {HomeComponent} from './components/home/home.component';
 import {NavigationComponent} from './components/technical/navigation/navigation.component';
-import {SideDrawerComponent} from "./components/technical/side-nav/side-drawer.component";
-import {SessionComponent} from './components/technical/sesion/session.component';
+import {SideDrawerComponent} from "./components/technical/side-drawer/side-drawer.component";
+import {BlockComponent} from './components/technical/block/block.component';
 import {TabsComponent} from './components/technical/tabs/tabs.component';
 import {TabComponent} from './components/technical/tab/tab.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {SessionComponent} from './components/technical/session/session.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import {TabComponent} from './components/technical/tab/tab.component';
     HomeComponent,
     NavigationComponent,
     SideDrawerComponent,
-    SessionComponent,
+    BlockComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    SessionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

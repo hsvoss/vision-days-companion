@@ -1,0 +1,11 @@
+<div class="header" [class.collapsible]="collapsible">
+  <h1>{{heading}}</h1>
+  <div class="time">{{start}}</div>
+</div>
+<ng-content></ng-content>
+<div *ngIf="room !=='' || speaker !=='' || end !==''" class="footer">
+  <div class="room">{{room}}</div>
+  <div class="speaker">{{speaker}}</div>
+  <div class="time">{{end}}</div>
+</div>
+
