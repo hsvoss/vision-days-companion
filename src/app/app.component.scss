@@ -1,15 +1,28 @@
 @import "src/colors";
 
-.logo {
-  height: 5vh;
-  padding: 0.5vh;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100vh;
+
+}
+
+.header {
+  justify-self: flex-start;
+  align-items: center;
+  height: $header-height;
+  width: 100vw;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
-  gap: 1vw;
+  gap: 1rem;
 
   .logo-img {
     object-fit: scale-down;
     overflow-x: hidden;
+    max-height: calc(#{$header-height} - 1rem);
   }
 
   span {
@@ -26,17 +39,19 @@
   justify-content: space-around;
   align-content: stretch;
   background: transparent;
+  //height: 100%;
+  flex-grow: 1;
 
 
   img {
-    height: 94vh;
+    height: calc(100vh - #{$header-height});
     width: 5vw;
   }
 
   .main {
-    flex-grow: 2;
+    flex-grow: 1;
     width: 60vw;
-    height: 94vh;
+    height: calc(100vh - #{$header-height});
     overflow-y: scroll;
     //padding: 1vh;
     /* hide scrollbar but allow scrolling */
@@ -52,7 +67,7 @@
 
   app-navigation {
     flex-grow: 2;
-    height: 94vh;
+    //height: 100%;
     width: 30vw;
   }
 
