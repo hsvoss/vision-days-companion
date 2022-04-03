@@ -11,14 +11,15 @@
 
 .header {
   justify-self: flex-start;
+  align-items: center;
   height: $header-height;
+  width: 100vw;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 
   .logo-img {
-    align-self: flex-start;
     object-fit: scale-down;
     overflow-x: hidden;
     max-height: calc(#{$header-height} - 1rem);
