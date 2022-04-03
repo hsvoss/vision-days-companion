@@ -1,32 +1,48 @@
-<app-session heading="Bereichsmeeting" start="9:00" end="12:00">
-  <app-tabs>
-    <app-tab tabTitle="BO">
-      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
-      </app-session>
-    </app-tab>
-    <app-tab tabTitle="BC">
-      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
-      </app-session>
-    </app-tab>
-    <app-tab tabTitle="ITC">
-      <app-session heading="Festsetzung" start="30 min"
-                   speaker="Hans Frömel">
-      </app-session>
-      <app-session heading="Penetration Tests" start="1 h"
-                   speaker="Faycal Sabbane">
-      </app-session>
-      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">
-      </app-session>
-      <app-session heading="Hello Android" start="30 min"
-                   speaker="Catharina Schwarz">
-      </app-session>
-    </app-tab>
-  </app-tabs>
-</app-session>
+<!--<app-block heading="Bereichsmeeting" start="9:00" end="12:00">-->
 
-<app-session heading="Zusammenfassung & Ausblick" start="12:00" end="13:00"
-             speaker="???">
-</app-session>
+<!--      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">-->
+<!--      </app-session>-->
 
-<app-session heading="Fingerfood & Abreise" style="background-color: #FFFFDEFF" start="13:00" end="14:00">
-</app-session>
+<!--      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" start="30 min">-->
+<!--      </app-session>-->
+
+
+<!--      <app-session heading="Kaffeepause" style="background-color: #FFFFDEFF" room="Foyer" start="30 min">-->
+<!--      </app-session>-->
+
+<!--</app-block>-->
+
+<app-block end="12:00" heading="Bereichsmeeting BC" start="9:00" [collapsible]="true" room="Atlantik I">
+  <app-session heading="Kaffeepause" start="10:00" end="10:30" room="Foyer"
+               style="background-color: #FFFFDEFF"></app-session>
+</app-block>
+
+<app-block end="12:00" heading="Bereichsmeeting ITC" start="9:00" [collapsible]="true" room="Atlantik II">
+  <app-session heading="Penetration Tests" start="9:00" end="10:00"
+               speaker="Faycal Sabbane">
+  </app-session>
+  <app-session heading="Kaffeepause" start="10:00" end="10:30" room="Foyer"
+               style="background-color: #FFFFDEFF"></app-session>
+
+  <app-session heading="Hello Android" start="10:30" end="11:00"
+               speaker="Catharina Schwarz">
+  </app-session>
+
+  <app-session heading="Left over" start="11:00" end="12:00"
+               speaker="???">
+  </app-session>
+
+
+</app-block>
+<app-block end="12:00" heading="Bereichsmeeting BO" start="9:00" [collapsible]="true" room="Atlantik III">
+  <app-session heading="Kaffeepause" start="10:00" end="10:30" room="Foyer"
+               style="background-color: #FFFFDEFF"></app-session>
+</app-block>
+
+
+<app-block heading="Zusammenfassung & Ausblick" start="12:00" end="13:00"
+           speaker="???">
+</app-block>
+
+<app-block heading="Fingerfood & Abreise" style="background-color: #FFFFDEFF" start="13:00" end="14:00" room="Lobby">
+</app-block>

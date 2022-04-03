@@ -11,7 +11,10 @@ export class SessionComponent implements OnInit {
   @Input() start: string = "";
   @Input() end: string = "";
   @Input() speaker: string = "";
+  @Input() room: string = "";
 
+  @Input() collapsible: boolean = false;
+  collapsed: boolean = false;
 
   constructor() {
   }

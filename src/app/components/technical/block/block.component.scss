@@ -1,46 +1,61 @@
 @import "src/colors";
 
+
 :host {
-  margin: 1vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-bottom: 1vh;
+  //margin: 1vh;
   border: 1vh solid $blue-light;
   border-radius: 1vh;
   background: white;
-
   display: flex;
   flex-direction: column;
+
+}
+
+.collapsible {
+  background-color: $collapsible;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
 
+  div {
+    display: flex
+  }
+
+  img {
+    height: 5vh;
+  }
+
   .time {
     margin: 1vh 1vw;
     color: gray;
   }
 
+}
+
+.horizontal-line {
+  border-top: 0.5vh solid $blue-light;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
 
-  .speaker {
-    justify-self: center;
+  &.collapsible {
+    background-color: $collapsible;
   }
 
-  .time {
+  div {
     margin: 1vh 1vw;
     color: gray;
   }
 
 }
 
-.speaker {
-  margin: 1vh 1vw;
-  align-self: flex-end;
-  color: gray;
+
+.collapsible {
+  overflow: hidden;
 }
+
+

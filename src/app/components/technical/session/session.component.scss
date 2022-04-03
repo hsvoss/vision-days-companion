@@ -1,0 +1,54 @@
+@import "src/colors";
+
+
+:host {
+  border-top: 0.5vh solid $blue-light;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex
+  }
+
+  &.collapsible {
+    background-color: $collapsible;
+  }
+
+  img {
+    height: 5vh;
+  }
+
+  .time {
+    margin: 1vh 1vw;
+    color: gray;
+  }
+
+}
+
+.horizontal-line {
+  border-top: 0.5vh solid $blue-light;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  &.collapsible {
+    background-color: $collapsible;
+  }
+
+  div {
+    margin: 1vh 1vw;
+    color: gray;
+  }
+
+}

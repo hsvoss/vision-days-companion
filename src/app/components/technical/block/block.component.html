@@ -1,0 +1,18 @@
+<div [class.collapsible]="collapsible">
+  <div (click)="toggleCollapse()" class="header">
+    <div>
+      <img *ngIf="collapsible" [@rotete]="collapsed" alt="carret" src="/assets/icons/angle-down-solid.svg">
+      <h1>{{heading}}</h1>
+    </div>
+    <div class="time">{{start}}</div>
+  </div>
+  <div [@collapse]="collapsed" [class.collapsible]="collapsible">
+    <ng-content></ng-content>
+    <div *ngIf="collapsible" class="horizontal-line"></div>
+  </div>
+  <div (click)="toggleCollapse()" *ngIf="room !=='' || speaker !=='' || end !==''" class="footer">
+    <div class="room">{{room}}</div>
+    <div class="speaker">{{speaker}}</div>
+    <div class="time">{{end}}</div>
+  </div>
+</div>
