@@ -41,10 +41,13 @@
     height: 94vh;
     width: 30vw;
   }
+
+  &.blue-lightest {
+    background: $blue-lightest;
+  }
+
 }
 
-.blue-lightest {
-  background: $blue-lightest;
-}
+
 
 

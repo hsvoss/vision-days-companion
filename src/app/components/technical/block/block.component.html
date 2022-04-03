@@ -6,7 +6,7 @@
     </div>
     <div class="time">{{start}}</div>
   </div>
-  <div [@collapse]="collapsed" [class.collapsible]="collapsible">
+  <div class="content-wrapper" [@collapse]="collapsed" [class.collapsible]="collapsible">
     <ng-content></ng-content>
     <div *ngIf="collapsible" class="horizontal-line"></div>
   </div>
