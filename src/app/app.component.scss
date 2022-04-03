@@ -21,7 +21,7 @@
     align-self: flex-start;
     object-fit: scale-down;
     overflow-x: hidden;
-    max-height: 2rem;
+    max-height: calc(#{$header-height} - 1rem);
   }
 
   span {
@@ -43,14 +43,14 @@
 
 
   img {
-    height: calc(100vh - 3rem);
+    height: calc(100vh - #{$header-height});
     width: 5vw;
   }
 
   .main {
     flex-grow: 1;
     width: 60vw;
-    height: calc(100vh - 3rem);
+    height: calc(100vh - #{$header-height});
     overflow-y: scroll;
     //padding: 1vh;
     /* hide scrollbar but allow scrolling */
