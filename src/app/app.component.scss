@@ -5,6 +5,19 @@
   padding: 0.5vh;
   display: flex;
   justify-content: space-between;
+
+  .logo-img {
+    object-fit: scale-down;
+    overflow-x: hidden;
+  }
+
+  span {
+    cursor: pointer;
+
+    img {
+      object-fit: scale-down;
+    }
+  }
 }
 
 .horizontal {
