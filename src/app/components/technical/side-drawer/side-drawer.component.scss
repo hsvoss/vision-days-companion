@@ -1,7 +1,9 @@
+@import "src/colors";
+
 .right-drawer {
   position: fixed;
   z-index: 999;
-  top: calc(6vh);
+  top: $header-height;
   bottom: 0;
   left: 0;
   right: 0;

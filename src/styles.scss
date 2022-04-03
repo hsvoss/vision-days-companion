@@ -1,9 +1,14 @@
 @import "src/colors";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "URW Dock bold", Helvetica, Arial, Lucida, sans-serif;
   font-size: 2vh;
+  height: 100%;
 }
 
 h1 {
@@ -22,5 +27,10 @@ h3 {
 }
 
 p {
+  font-size: 1.5vh;
   margin: 1vh 1vw;
+}
+
+a {
+  font-size: 1.5vh;
 }
