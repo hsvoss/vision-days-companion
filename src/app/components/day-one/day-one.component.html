@@ -5,9 +5,9 @@
   </p>
 </app-block>
 
-<app-block beginn="13:00" end="14:00" heading="Begrüßung & Warm Up" speaker="Annett oder Hendrik"></app-block>
+<app-block beginn="13:00" end="14:00" heading="Begrüßung & Warm Up" speaker="Annett oder Hendrik" room="Atlantik"></app-block>
 <app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BC" room="Atlantik I">
-  <app-session beginn="30 min" heading="Kaffeepause" style="background-color: #FFFFDEFF"></app-session>
+  <app-session heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
 </app-block>
 
 <app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting ITC" room="Atlantik II">
@@ -19,11 +19,12 @@
   <app-session beginn="17:05" end="18:00" heading="Stand der Projekte" speaker="???"></app-session>
 </app-block>
 <app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BO" room="Atlantik III">
-  <app-session beginn="30 min" heading="Kaffeepause" style="background-color: #FFFFDEFF"></app-session>
+  <app-session heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
 </app-block>
 
-<app-block beginn="18:00" end="19:00" heading="Ideenmanagement" speaker="Anreas & Niels"></app-block>
-<app-block beginn="19:00" end="20:00" heading="Abendessen" speaker="Buffet im Hotel" style="background-color: #FFFFDEFF"></app-block>
-<app-block beginn="20:00" end="open end" heading="Feierabendbier" speaker="Uwe & Niels">
+<app-block beginn="18:00" end="19:00" heading="Ideenmanagement" room="Atlantik" speaker="Anreas & Niels"></app-block>
+<app-block beginn="19:00" end="20:00" heading="Abendessen" speaker="Buffet im Hotel" room="Restaurant"
+           style="background-color: #FFFFDEFF"></app-block>
+<app-block beginn="20:00" end="Open End" heading="Feierabendbier" speaker="Uwe & Niels" room="Bar & Terrasse">
   <p>mit Prämierung des Ideenmanagements</p>
 </app-block>
