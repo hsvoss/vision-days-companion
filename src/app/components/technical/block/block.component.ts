@@ -24,14 +24,13 @@ const DEFAULT_DURATION: number = 600;
 export class BlockComponent implements OnInit {
 
   @Input() heading: string = "";
-  @Input() start: string = "";
+  @Input() beginn: string = "";
   @Input() end: string = "";
   @Input() speaker: string = "";
   @Input() room: string = "";
 
   @Input() collapsible: boolean = false;
   collapsed: boolean = false;
-
 
   constructor() {
   }
