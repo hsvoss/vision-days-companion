@@ -17,6 +17,7 @@ import {TabComponent} from './components/technical/tab/tab.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SessionComponent} from './components/technical/session/session.component';
 import {ImpressumComponent} from './components/impressum/impressum.component';
+import {NgxSpinnerModule} from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -37,12 +38,14 @@ import {ImpressumComponent} from './components/impressum/impressum.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxSpinnerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

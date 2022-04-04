@@ -14,7 +14,9 @@ export class CheckForUpdateService {
     const everyMinuteOnceAppIsStable$ = concat(appIsStable$, everyMinute$);
 
     if (!isDevMode()) {
-      everyMinuteOnceAppIsStable$.subscribe(() => updates.checkForUpdate());
+      everyMinuteOnceAppIsStable$.subscribe(() => {
+        updates.checkForUpdate()
+      });
     }
   }
 }

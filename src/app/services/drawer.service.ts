@@ -1,22 +1,14 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DrawerService implements OnInit {
+export class DrawerService {
 
-  // private showDrawer$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(window.innerWidth < 980);
   private showDrawer$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor(private router: Router) {
-    // router.events.subscribe(() => {
-    //   this.setShowDrawer(false);
-    // });
-  }
-
-  ngOnInit() {
+  constructor() {
   }
 
   getShowDrawer(): Observable<boolean> {
