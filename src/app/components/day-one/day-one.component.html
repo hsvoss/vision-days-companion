@@ -1,53 +1,30 @@
-<app-block end="13:00" heading="Get-Together & Fingerfood" start="12:00" room="Lobby"
-           style="background-color: #FFFFDEFF">
+<app-block beginn="12:00" end="13:00" heading="Get-Together & Fingerfood" room="Lobby" style="background-color: #FFFFDEFF">
   <p>
     Wir treffen uns in der Lobby des Hotels. Dort werden Kleinigkeiten zur Stärkung gereicht. <br>
     Bitte checked direkt im Hotel ein. Dies ist bereits ab 11:30 Uhr möglich.
   </p>
 </app-block>
 
-<app-block end="14:00" heading="Begrüßung & Warm Up" speaker="Annett oder Hendrik" start="13:00">
-
-</app-block>
-<app-block end="18:00" heading="Bereichsmeeting BC" start="14:00" [collapsible]="true" room="Atlantik I">
-  <app-session heading="Kaffeepause" start="30 min" style="background-color: #FFFFDEFF">
-  </app-session>
+<app-block beginn="13:00" end="14:00" heading="Begrüßung & Warm Up" speaker="Annett oder Hendrik" room="Atlantik"></app-block>
+<app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BC" room="Atlantik I">
+  <app-session heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
 </app-block>
 
-<app-block end="18:00" heading="Bereichsmeeting ITC" start="14:00" [collapsible]="true" room="Atlantik II">
-  <app-session heading="Stand des Fachbereiches" speaker="Matthias Dannenberg"
-               start="14:00" end="14:30">
-  </app-session>
-  <app-session heading="Webscraping mit Cypress" speaker="Lutz Liebig"
-               start="14:35" end="15:20">
-  </app-session>
-  <app-session heading="Festsetzung" speaker="Hans Frömel"
-               start="15:30" end="16:00">
-  </app-session>
-  <app-session heading="Kaffeepause" start="16:00" end="16:30" room="Foyer" style="background-color: #FFFFDEFF">
-  </app-session>
-  <app-session heading="Einführung in Gradle" speaker="Roman Radev"
-               start="16:30" end="17:00">
-  </app-session>
-  <app-session heading="Stand der Projekte" speaker="???"
-               start="17:05" end="18:00">
-  </app-session>
-
+<app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting ITC" room="Atlantik II">
+  <app-session beginn="14:00" end="14:30" heading="Stand des Fachbereiches" speaker="Matthias Dannenberg"></app-session>
+  <app-session beginn="14:35" end="15:20" heading="Webscraping mit Cypress" speaker="Lutz Liebig"></app-session>
+  <app-session beginn="15:30" end="16:00" heading="Festsetzung" speaker="Hans Frömel"></app-session>
+  <app-session beginn="16:00" end="16:30" heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
+  <app-session beginn="16:30" end="17:00" heading="Einführung in Gradle" speaker="Roman Radev"></app-session>
+  <app-session beginn="17:05" end="18:00" heading="Stand der Projekte" speaker="???"></app-session>
 </app-block>
-<app-block end="18:00" heading="Bereichsmeeting BO" start="14:00" [collapsible]="true" room="Atlantik III">
-  <app-session heading="Kaffeepause" start="30 min" style="background-color: #FFFFDEFF">
-  </app-session>
+<app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BO" room="Atlantik III">
+  <app-session heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
 </app-block>
 
-<app-block end="19:00" heading="Ideenmanagement" speaker="Anreas & Niels" start="18:00">
-</app-block>
-
-<app-block end="20:00" heading="Abendessen"
-           speaker="Buffet im Hotel"
-           start="19:00" style="background-color: #FFFFDEFF"
->
-</app-block>
-
-<app-block end="open end" heading="Feierabendbier" speaker="Uwe & Niels" start="20:00">
+<app-block beginn="18:00" end="19:00" heading="Ideenmanagement" room="Atlantik" speaker="Anreas & Niels"></app-block>
+<app-block beginn="19:00" end="20:00" heading="Abendessen" speaker="Buffet im Hotel" room="Restaurant"
+           style="background-color: #FFFFDEFF"></app-block>
+<app-block beginn="20:00" end="Open End" heading="Feierabendbier" speaker="Uwe & Niels" room="Bar & Terrasse">
   <p>mit Prämierung des Ideenmanagements</p>
 </app-block>

@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class SessionComponent implements OnInit {
 
   @Input() heading: string = "";
-  @Input() start: string = "";
+  @Input() beginn: string = "";
   @Input() end: string = "";
   @Input() speaker: string = "";
   @Input() room: string = "";
