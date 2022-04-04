@@ -1,5 +1,5 @@
 <div class="header">
-  <img class="logo-img" alt="Logo" src="/assets/theme/Vision-Days.png">
+  <img alt="Logo" class="logo-img" src="/assets/theme/Vision-Days.png">
   <span (click)="toggleSidebar()" *ngIf="!widescreenMode">
     <img alt="menu" height="100%" src="/assets/icons/burger.svg">
   </span>
@@ -18,3 +18,4 @@
     </div>
   </app-side-drawer>
 </div>
+<ngx-spinner [fullScreen]="true" size="large" type="ball-pulse"><p style="color: white"> Updating... </p></ngx-spinner>

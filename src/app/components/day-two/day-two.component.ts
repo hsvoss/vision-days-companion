@@ -9,5 +9,5 @@ export class DayTwoComponent {
 
   constructor() {
   }
-  
+
 }
