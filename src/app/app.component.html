@@ -4,15 +4,15 @@
     <img alt="menu" height="100%" src="/assets/icons/burger.svg">
   </span>
 </div>
-<div class="horizontal blue-lightest">
-  <img alt="right" src="assets/theme/left.svg" style="z-index: 1002">
-  <div class="main">
+<div class="horizontal">
+  <img alt="left" class="left" src="assets/theme/left.svg" style="z-index: 1002">
+  <div class="main" [class.widescreenMode]="widescreenMode">
     <router-outlet></router-outlet>
   </div>
-  <img alt="right" src="assets/theme/right.svg">
-  <app-navigation *ngIf="widescreenMode"></app-navigation>
+  <img alt="right" class="right" [class.widescreenMode]="widescreenMode" src="assets/theme/right.svg">
+  <app-navigation class="nav-widescreen" *ngIf="widescreenMode"></app-navigation>
   <app-side-drawer>
-    <div class="horizontal">
+    <div class="drawer-content">
       <img alt="right" src="assets/theme/right.svg">
       <app-navigation></app-navigation>
     </div>
