@@ -1,18 +1,21 @@
-<app-block beginn="8:30" end="10:30" heading="Besuch der Reichstagskuppel" room="Lobby">
-  <p>Wir unternehmen einen Spaziergang durch den Tiergarten und besichtigen die Reichstagskuppel. Treffen um 8:30 Uhr in der Lobby.</p>
+<app-block beginn="8:30" end="11:00" heading="Reichstagskuppel" room="Lobby">
+  <p>Wir unternehmen einen Spaziergang durch den Tiergarten und besichtigen die Reichstagskuppel.
+    Treffen uns um 8:30 Uhr in der Lobby. Bitte tragt adäquates Schuhwerk und bringt euren
+    Personalausweis oder Pass mit.</p>
 </app-block>
-<app-block beginn="10:30" end="11:00" heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-block>
-<app-block beginn="11:00" end="11:45" heading="Drums" room="Atlantik"></app-block>
 
-<app-block beginn="12:00" end="13:00" heading="World Café" room="Atlantik" speaker="???"><p>Einführung</p></app-block>
+<app-block beginn="11:00" end="11:45" heading="Rhythmische Gymnastik" room="Atlantik" speaker="Niels & Uwe"></app-block>
+<app-block beginn="11:45" end="12:00" heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-block>
+
+<app-block beginn="12:00" end="13:00" heading="Einführung World Café" room="Atlantik"></app-block>
 <app-block beginn="13:00" end="14:00" heading="Mittagessen" room="Restaurant" speaker="Buffet im Hotel"
            style="background-color: #FFFFDEFF"></app-block>
-<app-block beginn="14:00" end="18:00" heading="World Café" room="Atlantik" speaker="???">
+
+<app-block beginn="14:00" end="18:00" heading="World Café" room="Atlantik" [collapsible]="true">
   <p>Quo vadis VISION?</p>
-  <app-session beginn="16:00" end="16:30" heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
-  <div class="horizontal-line"></div>
+  <app-session heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
 </app-block>
 
 <app-block beginn="18:00" end="19:00" heading="Humorinstitut" room="Atlantik" speaker="Eva Ullmann"></app-block>
-<app-block beginn="19:30" end="21:30" heading="Abendessen" speaker="???" style="background-color: #FFFFDEFF"></app-block>
-<app-block beginn="22:00" end="00:00" heading="Nachtwächter" room="Berlin" speaker="optional"></app-block>
+<app-block heading="Abendessen & Programm" style="background-color: #FFFFDEFF"></app-block>
+
