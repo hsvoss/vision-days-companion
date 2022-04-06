@@ -1,0 +1,16 @@
+<div class="banner" *ngIf="show">
+  <img alt="vision-logo" class="vision-logo" src="/assets/icons/icon-72x72.png" height="52">
+  <div class="description">
+    <div>Um die App zu installieren öffne das Menü und wähle 'Zum Home-Bildschirm'</div>
+    <div>
+      <img alt="ios-menu-btn" class="ios-menu-btn" src="/assets/icons/ios-menu-btn.png">
+      <img alt="ios-menu-btn" class="angle-right" src="/assets/icons/angle-down-solid.svg">
+      <img alt="ios-add-btn" class="ios-add-btn" src="/assets/icons/ios-add-btn.png">
+    </div>
+  </div>
+
+  <span class="close-ios-inv" (click)="onClose()">
+    <img alt="x-solid" class="x-solid" src="/assets/icons/x-solid.svg">
+  </span>
+
+</div>

@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SessionComponent} from './components/technical/session/session.component';
 import {ImpressumComponent} from './components/impressum/impressum.component';
 import {NgxSpinnerModule} from "ngx-spinner";
+import {InstallPromptComponent} from './components/ios-promt/install-prompt.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {NgxSpinnerModule} from "ngx-spinner";
     TabsComponent,
     TabComponent,
     SessionComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    InstallPromptComponent
   ],
   imports: [
     BrowserModule,
