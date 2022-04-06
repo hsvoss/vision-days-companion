@@ -13,7 +13,7 @@ const DEFAULT_DURATION: number = 600;
     transition('false => true', animate(DEFAULT_DURATION + 'ms ease-in')),
     transition('true => false', animate(DEFAULT_DURATION + 'ms ease-out'))
   ]),
-    trigger('rotete', [
+    trigger('rotate', [
       state('false', style({transform: 'rotate(0)'})),
       state('true', style({transform: 'rotate(-90deg)'})),
       transition('false => true', animate(DEFAULT_DURATION + 'ms ease-in')),

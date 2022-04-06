@@ -1,0 +1,65 @@
+@import "src/colors";
+
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1002;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .vision-logo {
+    margin-left: 10px;
+  }
+
+  .close-ios-inv {
+    margin-right: 10px;
+
+    .x-solid {
+      height: 32px;
+    }
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+
+  div {
+    text-align: center;
+    padding: 10px 25px 0;
+
+    mat-icon {
+      position: relative;
+      top: -7px;
+    }
+  }
+
+  img {
+    display: inline;
+  }
+
+}
+
+
+.logo {
+  height: calc(#{$header-height} - 1vh);
+}
+
+.angle-right {
+  transform: rotate(-90deg);
+  height: 32px;
+}
+
+
+//.ios-prompt {
+
+//}
