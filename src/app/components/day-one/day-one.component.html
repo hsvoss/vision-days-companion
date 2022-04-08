@@ -1,30 +1,29 @@
-<app-block beginn="12:00" end="13:00" heading="Get-Together & Fingerfood" room="Lobby" style="background-color: #FFFFDEFF">
+<app-block beginn="12:00" class="food" end="13:00" heading="Get-Together & Fingerfood" room="Lobby">
   <p>
     Wir treffen uns in der Lobby des Hotels. Dort werden Kleinigkeiten zur Stärkung gereicht. <br>
     Bitte checked direkt im Hotel ein. Dies ist bereits ab 11:30 Uhr möglich.
   </p>
 </app-block>
 
-<app-block beginn="13:00" end="14:00" heading="Begrüßung & Warm Up" speaker="Annett oder Hendrik" room="Atlantik"></app-block>
-<app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BC" room="Atlantik I">
-  <app-session heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
+<app-block beginn="13:00" end="14:00" heading="Begrüßung & Warm Up" room="Atlantik"></app-block>
+<app-block beginn="14:00" end="18:00" heading="Bereichsmeeting BC" room="Atlantik I">
 </app-block>
 
 <app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting ITC" room="Atlantik II">
   <app-session beginn="14:00" end="14:30" heading="Stand des Fachbereiches" speaker="Matthias Dannenberg"></app-session>
   <app-session beginn="14:35" end="15:20" heading="Webscraping mit Cypress" speaker="Lutz Liebig"></app-session>
   <app-session beginn="15:30" end="16:00" heading="Festsetzung" speaker="Hans Frömel"></app-session>
-  <app-session beginn="16:00" end="16:30" heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
+  <app-session beginn="16:00 - 16:30" class="food" heading="Kaffeepause"></app-session>
   <app-session beginn="16:30" end="17:00" heading="Einführung in Gradle" speaker="Roman Radev"></app-session>
   <app-session beginn="17:05" end="18:00" heading="Stand der Projekte"></app-session>
+  <div class="horizontal-line"></div>
 </app-block>
-<app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BO" room="Atlantik III">
-  <app-session heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
+<app-block beginn="14:00" end="18:00" heading="Bereichsmeeting BO" room="Atlantik III">
 </app-block>
 
 <app-block beginn="18:00" end="19:00" heading="Ideenmanagement" room="Atlantik" speaker="Andreas & Niels"></app-block>
-<app-block beginn="19:00" end="20:00" heading="Abendessen" speaker="Buffet im Hotel" room="Restaurant"
+<app-block beginn="19:00" end="20:00" heading="Abendessen" room="Buffet im Hotel"
            style="background-color: #FFFFDEFF"></app-block>
-<app-block beginn="20:00" end="Open End" heading="Feierabendbier" speaker="Uwe & Niels" room="Bar & Terrasse">
+<app-block beginn="20:00" end="Open End" heading="Feierabendbier" room="Bar & Terrasse" speaker="Uwe & Niels">
   <p>mit Prämierung des Ideenmanagements</p>
 </app-block>

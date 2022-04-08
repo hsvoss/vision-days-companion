@@ -25,6 +25,14 @@ body {
 
 }
 
+.horizontal-line {
+  border-top: 0.5vh solid $blue-light;
+}
+
+.food {
+  background-color: $food;
+}
+
 h1 {
   font-size: 3vh;
   margin: 1vh 1vw;
@@ -49,3 +57,23 @@ a {
   font-size: 1.5vh;
 }
 
+.card {
+
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vh;
+  border: 1vh solid $blue-light;
+  border-radius: 1vh;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+
+  .inline {
+    display: flex;
+    gap: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+
+}

@@ -1,18 +1,17 @@
-<app-block [collapsible]="true" beginn="9:00" end="12:00" heading="Bereichsmeeting BC" room="Atlantik I">
-  <app-session beginn="10:00" end="10:30" heading="Kaffeepause" room="Foyer"
-               style="background-color: #FFFFDEFF"></app-session>
+<app-block beginn="9:00" end="12:00" heading="Bereichsmeeting BC" room="Atlantik I">
 </app-block>
 
 <app-block [collapsible]="true" beginn="9:00" end="12:00" heading="Bereichsmeeting ITC" room="Atlantik II">
   <app-session beginn="9:00" end="10:00" heading="Penetration Tests" speaker="Faycal Sabbane"></app-session>
   <app-session beginn="10:00" end="10:30" heading="Hello Android" speaker="Catharina Schwarz"></app-session>
-  <app-session beginn="10:30" end="11:00" heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
+  <app-session beginn="10:30 - 11:00" class="food" heading="Kaffeepause"></app-session>
   <app-session beginn="11:00" end="12:00" heading="tba"></app-session>
+  <div class="horizontal-line"></div>
 </app-block>
-<app-block [collapsible]="true" beginn="9:00" end="12:00" heading="Bereichsmeeting BO" room="Atlantik III">
-  <app-session beginn="10:00" end="10:30" heading="Kaffeepause" room="Foyer" style="background-color: #FFFFDEFF"></app-session>
+<app-block beginn="9:00" end="12:00" heading="Bereichsmeeting BO" room="Atlantik III">
+
 </app-block>
 
-<app-block beginn="12:00" end="13:00" room="Atlantik
-" heading="Zusammenfassung & Ausblick"></app-block>
-<app-block beginn="13:00" end="14:00" heading="Fingerfood & Abreise" room="Lobby" style="background-color: #FFFFDEFF"></app-block>
+<app-block beginn="12:00" end="13:00" heading="Zusammenfassung & Ausblick" room="Atlantik
+"></app-block>
+<app-block beginn="13:00" class="food" end="14:00" heading="Fingerfood & Abreise" room="Lobby"></app-block>

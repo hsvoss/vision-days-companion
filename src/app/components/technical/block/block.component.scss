@@ -3,14 +3,13 @@
 :host {
   border: 1vh solid $blue-light;
   border-radius: 1vh;
-  background: white;
   display: flex;
   flex-direction: column;
 
-}
+  &:not(.food) {
+    background: white;
+  }
 
-.collapsible {
-  background-color: $collapsible;
 }
 
 .header {
@@ -40,9 +39,6 @@
   display: flex;
   justify-content: space-between;
 
-  &.collapsible {
-    background-color: $collapsible;
-  }
 
   div {
     margin: 1vh 1vw;
