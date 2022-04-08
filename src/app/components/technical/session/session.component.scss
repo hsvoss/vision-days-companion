@@ -3,7 +3,6 @@
 
 :host {
   border-top: 0.5vh solid $blue-light;
-  background: white;
 
   display: flex;
   flex-direction: column;
@@ -19,9 +18,6 @@
     display: flex
   }
 
-  &.collapsible {
-    background-color: $collapsible;
-  }
 
   img {
     height: 5vh;
@@ -42,9 +38,6 @@
   display: flex;
   justify-content: space-between;
 
-  &.collapsible {
-    background-color: $collapsible;
-  }
 
   div {
     margin: 1vh 1vw;
