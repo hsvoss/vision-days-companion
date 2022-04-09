@@ -23,19 +23,40 @@ nav {
       justify-content: center;
       align-items: center;
       background: $blue-medium;
-      height: 6vh;
+      //height: 6vh;
       color: white;
       border: 1vh solid $blue-light;
       border-radius: 1vh;
-      font-size: 3vh;
+      //font-size: 3vh;
+      font-size: 22px;
       margin-right: 2vh;
       margin-left: 1vh;
+
 
       &.active, &:hover {
         background: white;
         color: $blue-dark;
-        font-weight: bold;
+        font-weight: bolder;
         border-color: $blue-medium;
+      }
+    }
+
+
+    @media (min-height: 400px) {
+      button {
+        font-size: 30px;
+      }
+    }
+
+    @media (min-height: 600px) {
+      button {
+        font-size: 34px;
+      }
+    }
+
+    @media (min-height: 800px) {
+      button {
+        font-size: 48px;
       }
     }
   }
