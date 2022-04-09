@@ -25,7 +25,7 @@ body {
 }
 
 .horizontal-line {
-  border-top: 0.5vh solid $blue-light;
+  border-top: 3px solid $blue-light;
 }
 
 .food {
@@ -121,7 +121,7 @@ h1, h2, h3, p, a {
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 1vh;
-  border: 1vh solid $blue-light;
+  border: 5px solid $blue-light;
   border-radius: 1vh;
   background: white;
 
