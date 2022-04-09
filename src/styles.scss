@@ -37,8 +37,10 @@ body {
   font-size: 16px;
 }
 
-p {
-  text-align: justify;
+@media (min-width: 320px) {
+  p {
+    text-align: justify;
+  }
 }
 
 .card .inline {
