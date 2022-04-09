@@ -24,6 +24,9 @@ export class AppComponent implements OnInit {
       .observe(['(min-width: 992px)'])
       .subscribe((state: BreakpointState) => {
         this.widescreenMode = state.matches;
+        if (this.widescreenMode) {
+          this.navigationService.setShowDrawer(false)
+        }
       });
   }
 
