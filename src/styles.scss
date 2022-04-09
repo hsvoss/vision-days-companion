@@ -11,7 +11,6 @@ html {
 body {
   margin: 0;
   font-family: "URW Dock bold", Helvetica, Arial, Lucida, sans-serif;
-  font-size: 2vh;
   //height: 100%;
 
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -33,29 +32,89 @@ body {
   background-color: $food;
 }
 
-h1 {
-  font-size: 3vh;
-  margin: 1vh 1vw;
+//max-width: 575px (default value)
+*, p, a {
+  font-size: 16px;
 }
 
 h2 {
-  font-size: 2.5vh;
-  margin: 1vh 1vw 0;
+  font-size: 18px;
 }
 
-h3 {
-  font-size: 2vh;
-  margin: 1vh 1vw 0;
+h1 {
+  font-size: 22px
 }
 
-p {
-  font-size: 1.5vh;
+@media (min-width: 576px) {
+  *, p, a {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 24px
+  }
+
+}
+
+@media (min-width: 768px) {
+  *, p, a {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 26px
+  }
+
+
+}
+
+//@media (min-width: 992px) {
+//menu opens
+//}
+
+@media (min-width: 1200px) {
+  *, p, a {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h1 {
+    font-size: 30px
+  }
+
+
+}
+
+@media (min-width: 1400px) {
+  *, p, a {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 34px
+  }
+}
+
+
+h1, h2, h3, p, a {
   margin: 1vh 1vw;
 }
 
-a {
-  font-size: 1.5vh;
-}
 
 .card {
 
