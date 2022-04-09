@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.breakpointObserver
-      .observe(['(min-width: 980px)'])
+      .observe(['(min-width: 992px)'])
       .subscribe((state: BreakpointState) => {
         this.widescreenMode = state.matches;
       });
