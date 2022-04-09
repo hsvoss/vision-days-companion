@@ -6,7 +6,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 })
 export class DrawerService {
 
-  private showDrawer$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  showDrawer$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() {
   }

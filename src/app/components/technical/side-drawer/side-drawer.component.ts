@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, HostListener, ViewEncapsulation} from '@angular/core';
 import {DrawerService} from 'src/app/services/drawer.service';
 import {Observable} from 'rxjs';
 
@@ -10,10 +10,11 @@ import {Observable} from 'rxjs';
 })
 export class SideDrawerComponent {
 
-  showSideNav: Observable<boolean> = this.navService.getShowDrawer();
-  private windowWidth: number = window.innerWidth;
 
-  constructor(private navService: DrawerService) {
+  showSideNav: Observable<boolean> = this.drawerService.getShowDrawer();
+  windowWidth: number = window.innerWidth;
+
+  constructor(private drawerService: DrawerService) {
   }
 
   calcAnimation(showNav: boolean | null) {
@@ -27,4 +28,13 @@ export class SideDrawerComponent {
   onResize(_: any): void {
     this.windowWidth = window.innerWidth;
   }
+
+
+  @HostListener('window:orientationchange', ['$event'])
+  onOrientationChange(_: any) {
+    this.windowWidth = window.innerWidth; // force recalculating Animation on orientationchange
+    this.drawerService.showDrawer$.next(this.drawerService.showDrawer$.value)
+
+  }
+
 }
