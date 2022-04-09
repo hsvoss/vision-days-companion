@@ -4,16 +4,16 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2vh;
+  gap: 1rem;
   background: $blue-dark;
-  width: 100%;
+  //width: 100%;
   height: 100%;
 
   div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2vh;
+    gap: 1rem;
     background: $blue-dark;
     width: 100%;
     height: 100%;
@@ -61,10 +61,19 @@ nav {
     }
   }
 
-  a {
-    color: $blue-medium;
-    justify-self: flex-end;
-    align-self: flex-end;
-    margin: 1vh;
+}
+
+a {
+  position: absolute;
+  color: $blue-medium;
+  bottom: 0;
+  right: 0;
+  z-index: 1007;
+  margin: 1vw;
+}
+
+@media (max-height: 450px) {
+  nav {
+    flex-direction: row;
   }
 }
