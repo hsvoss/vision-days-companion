@@ -11,10 +11,10 @@ import {Observable} from 'rxjs';
 export class SideDrawerComponent {
 
 
-  showSideNav: Observable<boolean> = this.navService.getShowDrawer();
-  private windowWidth: number = window.innerWidth;
+  showSideNav: Observable<boolean> = this.drawerService.getShowDrawer();
+  windowWidth: number = window.innerWidth;
 
-  constructor(private navService: DrawerService) {
+  constructor(private drawerService: DrawerService) {
   }
 
   calcAnimation(showNav: boolean | null) {
@@ -32,7 +32,9 @@ export class SideDrawerComponent {
 
   @HostListener('window:orientationchange', ['$event'])
   onOrientationChange(_: any) {
-    this.windowWidth = window.innerWidth;
+    this.windowWidth = window.innerWidth; // force recalculating Animation on orientationchange
+    this.drawerService.showDrawer$.next(this.drawerService.showDrawer$.value)
+
   }
 
 }
