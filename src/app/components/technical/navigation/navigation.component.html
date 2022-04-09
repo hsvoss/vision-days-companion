@@ -1,7 +1,5 @@
 <nav>
   <div class="navigation">
-
-    <div *ngIf="!oldSmartphone"></div>
     <div>
       <button routerLink="/" routerLinkActive="active"
               [routerLinkActiveOptions]={exact:true} (click)="onClick()">
@@ -26,7 +24,6 @@
         20. Mai
       </button>
     </div>
-    <div *ngIf="!oldSmartphone"></div>
   </div>
   <a routerLink="/impressum" routerLinkActive="active"
      (click)="onClick()"
