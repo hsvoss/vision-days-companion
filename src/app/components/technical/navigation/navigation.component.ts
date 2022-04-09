@@ -16,7 +16,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.breakpointObserver
-      .observe(['(max-height: 450px)'])
+      .observe(['(max-height: 550px)'])
       .subscribe((state: BreakpointState) => {
         this.oldSmartphone = state.matches;
       });
