@@ -18,39 +18,40 @@
 
   div {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
 
   img {
-    height: calc(22px + 1vh);
+    margin: 1vh 0 1vh 1vw;
+    height: 22px;
     width: auto;
   }
 
   @media (min-width: 576px) {
     img {
-      height: calc(24px + 1vh);
+      height: 24px;
       width: auto;
     }
   }
 
   @media (min-width: 768px) {
     img {
-      height: calc(26px + 1vh);
+      height: 26px;
       width: auto;
     }
   }
 
   @media (min-width: 1200px) {
     img {
-      height: calc(30px + 1vh);
+      height: 30px;
       width: auto;
     }
   }
 
   @media (min-width: 1400px) {
     img {
-      height: calc(34px + 1vh);
+      height: 34px;
       width: auto;
     }
   }
