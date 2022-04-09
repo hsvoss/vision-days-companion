@@ -1,6 +1,6 @@
 <nav>
+  <div *ngIf="!oldSmartphone"></div>
   <div>
-
     <button routerLink="/" routerLinkActive="active"
             [routerLinkActiveOptions]={exact:true} (click)="onClick()">
       Location
@@ -9,7 +9,8 @@
             [routerLinkActiveOptions]={exact:true} (click)="onClick()">
       FAQ
     </button>
-    <br>
+  </div>
+  <div>
     <button routerLink="/day-one" routerLinkActive="active"
             [routerLinkActiveOptions]={exact:true} (click)="onClick()">
       18. Mai
@@ -23,7 +24,8 @@
       20. Mai
     </button>
   </div>
-  <a routerLink="/impressum" routerLinkActive="active"
-     (click)="onClick()"
-     [routerLinkActiveOptions]={exact:true}>Impressum</a>
+  <div *ngIf="!oldSmartphone"></div>
 </nav>
+<a routerLink="/impressum" routerLinkActive="active"
+   (click)="onClick()"
+   [routerLinkActiveOptions]={exact:true}>Impressum</a>
