@@ -1,11 +1,11 @@
-<div class="header">
+<div class="header" [class.widescreenMode]="widescreenMode">
   <img alt="Logo" class="logo-img" src="/assets/theme/Vision-Days.png">
   <span (click)="toggleSidebar()" *ngIf="!widescreenMode">
     <img alt="menu" height="100%" src="/assets/icons/burger.svg">
   </span>
 </div>
 <div class="horizontal">
-  <img alt="left" class="left" src="assets/theme/left.svg" style="z-index: 1002">
+  <img alt="left" class="left" src="assets/theme/left.svg">
   <div class="main" [class.widescreenMode]="widescreenMode">
     <router-outlet></router-outlet>
   </div>

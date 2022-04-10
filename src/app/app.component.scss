@@ -12,7 +12,7 @@
   top: 0;
   width: 100%;
   background-color: white;
-
+  z-index: 1;
 
   justify-self: flex-start;
   align-items: center;
@@ -37,9 +37,25 @@
   }
 }
 
+.header:after {
+  content: '';
+  width: 5vw;
+  height: 2px;
+  background: #ffffff;
+  background: linear-gradient(white, $blue-dark);
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+}
+
+.header.widescreenMode:after {
+  width: 35vw;
+}
+
 
 .horizontal {
   margin-top: $header-height;
+  background: linear-gradient(white 0, $blue-lightest 2px);
 
   .left {
     position: fixed;
@@ -91,7 +107,6 @@
   img {
     width: 5vw;
   }
-
 
   app-navigation {
     width: 100%
