@@ -10,7 +10,6 @@
 .header {
   position: fixed;
   top: 0;
-  z-index: 1003;
   width: 100%;
   background-color: white;
 
@@ -38,32 +37,19 @@
   }
 }
 
-.left {
-  position: fixed;
-  top: $header-height;
-  height: calc(100vh - #{$header-height});
-  width: 5vw;
-  left: 0;
-}
-
-.right {
-  position: fixed;
-  top: $header-height;
-  height: calc(100vh - #{$header-height});
-  width: 5vw;
-  right: 0;
-
-  &.widescreenMode {
-    right: 30vw;
-  }
-}
-
 
 .horizontal {
-  background: $blue-lightest;
+  margin-top: $header-height;
+
+  .left {
+    position: fixed;
+    top: $header-height;
+    height: calc(100vh - #{$header-height});
+    width: 5vw;
+    left: 0;
+  }
 
   .main {
-    padding-top: $header-height;
     padding-left: 5vw;
     padding-right: 5vw;
 
@@ -73,12 +59,25 @@
 
   }
 
+  .right {
+    position: fixed;
+    top: $header-height;
+    height: calc(100vh - #{$header-height});
+    width: 5vw;
+    right: 0;
+
+    &.widescreenMode {
+      right: 30vw;
+    }
+  }
+
   .nav-widescreen {
     position: fixed;
     width: 30vw;
     top: $header-height;
     right: 0;
     bottom: 0;
+
   }
 }
 
