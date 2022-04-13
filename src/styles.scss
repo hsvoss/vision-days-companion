@@ -43,9 +43,31 @@ body {
   }
 }
 
-.card .inline {
-  height: calc(16px + 2vh);
+.card {
+
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vh;
+  border: 5px solid $blue-light;
+  border-radius: 1vh;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
 }
+
+.inline {
+  display: flex;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  height: calc(16px + 2vh);
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
 
 h2 {
   font-size: 18px;
@@ -60,7 +82,7 @@ h1 {
     font-size: 18px;
   }
 
-  .card .inline {
+  .inline {
     height: calc(18px + 2vh);
   }
 
@@ -78,7 +100,7 @@ h1 {
   *, p, a {
     font-size: 20px;
   }
-  .card .inline {
+  .inline {
     height: calc(20px + 2vh);
   }
 
@@ -102,7 +124,7 @@ h1 {
     font-size: 22px;
   }
 
-  .card .inline {
+  .inline {
     height: calc(22px + 2vh);
   }
 
@@ -122,7 +144,7 @@ h1 {
     font-size: 24px;
   }
 
-  .card .inline {
+  .inline {
     height: calc(24px + 2vh);
   }
 
@@ -141,27 +163,3 @@ h1, h2, h3, p, a {
 }
 
 
-.card {
-
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-bottom: 1vh;
-  border: 5px solid $blue-light;
-  border-radius: 1vh;
-  background: white;
-
-  display: flex;
-  flex-direction: column;
-
-  .inline {
-    display: flex;
-    padding-left: 1vw;
-    padding-right: 1vw;
-
-    img {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-}
