@@ -1,4 +1,7 @@
-<app-block beginn="9:00" end="12:00" heading="Bereichsmeeting BC" room="Atlantik I">
+<app-block [collapsible]="true" beginn="9:00" end="12:00" heading="Bereichsmeeting BC" room="Atlantik I">
+  <app-session heading="Agenda in Planung..."></app-session>
+  <app-session beginn="10:30 - 11:00" class="food" heading="Kaffeepause"></app-session>
+  <div class="horizontal-line"></div>
 </app-block>
 
 <app-block [collapsible]="true" beginn="9:00" end="12:00" heading="Bereichsmeeting ITC" room="Atlantik II">
@@ -8,8 +11,10 @@
   <app-session beginn="11:00" end="12:00" heading="tba"></app-session>
   <div class="horizontal-line"></div>
 </app-block>
-<app-block beginn="9:00" end="12:00" heading="Bereichsmeeting BO" room="Atlantik III">
-
+<app-block [collapsible]="true" beginn="9:00" end="12:00" heading="Bereichsmeeting BO" room="Atlantik III">
+  <app-session heading="Agenda in Planung..."></app-session>
+  <app-session beginn="10:30 - 11:00" class="food" heading="Kaffeepause"></app-session>
+  <div class="horizontal-line"></div>
 </app-block>
 
 <app-block beginn="12:00" end="13:00" heading="Zusammenfassung & Ausblick" room="Atlantik
