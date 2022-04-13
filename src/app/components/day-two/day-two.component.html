@@ -1,34 +1,49 @@
-<app-block beginn="8:30" end="11:00" heading="Reichstagskuppel" room="Lobby">
+<app-block beginn="8:30" end="10:45" heading="Reichstagskuppel" room="Lobby">
   <p>Wir unternehmen einen Spaziergang durch den Tiergarten und besichtigen die Reichstagskuppel.
-    Treffen uns um 8:30 Uhr in der Lobby. Bitte tragt adäquates Schuhwerk und bringt euren
+    Wir treffen uns um 8:30 Uhr in der Lobby. Bitte tragt adäquates Schuhwerk und bringt euren
     Personalausweis oder Pass mit.</p>
 </app-block>
 
-<app-block beginn="11:00" end="11:45" heading="Rhythmische Gymnastik" room="Atlantik" speaker="Niels & Uwe"></app-block>
-<app-block heading="Kaffeepause" class="food"></app-block>
+<app-block beginn="10:45" end="13:00" heading="Einführung World Café" room="Atlantik" speaker="Florian Grolman"></app-block>
+<app-block beginn="13:00" class="food" end="14:00" heading="Mittagessen" room="Restaurant"
+           speaker="Buffet im Hotel"></app-block>
 
-<app-block beginn="12:00" end="13:00" heading="Einführung World Café" room="Atlantik"></app-block>
-<app-block beginn="13:00" end="14:00" heading="Mittagessen" room="Restaurant" speaker="Buffet im Hotel"
-           class="food"></app-block>
-
-<app-block beginn="14:00" end="18:00" heading="World Café" room="Atlantik" [collapsible]="true">
+<app-block beginn="14:00" end="15:00" heading="Rhythmische Gymnastik" room="Atlantik" speaker="Niels & Uwe"></app-block>
+<app-block [collapsible]="true" beginn="15:00" end="18:00" heading="World Café" room="Atlantik" speaker="Florian Grolman">
   <p>Quo vadis VISION?</p>
-  <app-session heading="Kaffeepause" beginn="16:00 - 16:30" class="food"></app-session>
+  <app-session beginn="16:00 - 16:30" class="food" heading="Kaffeepause"></app-session>
   <div class="horizontal-line"></div>
 </app-block>
 
 <app-block beginn="18:00" end="19:00" heading="Humorinstitut" room="Atlantik" speaker="Eva Ullmann"></app-block>
-<app-block heading="Wilde Matilde: Abendessen & Gin Tasting" room="Lobby" class="food" beginn="19:00" end="22:00"
-           [collapsible]="true">
-  <p>Eine Studie hat es endlich
-    bewiesen: Gin macht schön, glücklich und gesund. Den Klassiker Gin & Tonic dürfte jeder kennen. Doch der Wachholderschnaps hat weit mehr
-    zu bieten. Beim Gin Tasting in der Wilden Matilde gibt es eine Menge „Nascherei für Große“. Macht es euch am Kettenkarusselltresen
-    gemütlich und lasst euch mitnehmen auf eine Reise durch die wunderbar aromatische Welt des Gins.</p>
-  <p>Bevor ihr zehn exquisite Gin-Sorten auf die Zunge bekommt, geben wir eine Einführung in seine Geschichte und Bestandteile. Danach führt
-    euch unser Gin-Experte an die unterschiedlichen Aromen heran. Jeder Gin ist einzigartig und bietet leckere Kombinationsmöglichkeiten.
-    Habt ihr schon mal einen Gin mit Blutorange, Pfefferkörnern und Dill getrunken? Wir zeigen euch außergewöhnliche Drinks mit
-    Lavendelblüten, Zitronenthymian, Muskat, Rosmarin, rote Beete, Jasmin, Kokosnuss, frischen Früchten und vielen weiteren Zutaten. Nach
-    einem Gin Tasting in der Wilden Matilde wollt ihr nie wieder einen beliebigen Gin & Tonic trinken. Denn als künftige Experten werdet ihr
-    wissen: jedes Tonic harmoniert anders mit einer Gin-Sorte. Wir haben zehn Sorten Gin und verschiedenste Tonics im Programm.</p>
+<app-block beginn="19:00" class="food" end="Open End" heading="Abendessen & Gin Tasting" room="Lobby" speaker="4-Gänge-Menü">
+  <p>Unser Abendprogramm findet in der Nähe der Rathausbrücke statt. Wir treffen uns um 19:00 Uhr in der Lobby und fahren gemeinsam dort
+    hin.</p>
+  <h2>Rückweg</h2>
+  <p>
+    Dies ist Open-End Veranstaltung. Daher bitten wir euch den Rückweg selbst zu organisieren. Ihr könnt entweder einen einstündigen
+    Spaziergang unternehmen oder die öffentlichen Verkehrsmittel nutzen.
+  </p>
+
+  <div class="inline">
+    <img alt="email" src="/assets/icons/bus-solid.svg"/>
+    <a
+      href="https://www.bvg.de/de/verbindungen/verbindungssuche?SID=A%3D2%40O%3D10178%2520Berlin-Mitte%2C%2520Rathausstr.%252023%40X%3D13404939%40Y%3D52517490%40U%3D103%40L%3D770007158%40B%3D1%40p%3D1592347662%40&ZID=A%3D2%40O%3D10787%2520Berlin-Tiergarten%2C%2520St%25C3%25BClerstr.%25206%40X%3D13349197%40Y%3D52508258%40U%3D103%40L%3D770002372%40B%3D1%40p%3D1592347662%40&timeSel=depart&time=22%3A00&date=19.05.2022&start=1"
+      target="_blank">
+      Hier ist der Busfahrplan
+    </a>
+  </div>
+  <br>
+
+  <p>
+    Planmäßige Abfahrtszeiten der <b>Buslinie 200</b> in Richtung Zoologischer Garten an der Haltestelle <b>U Rotes Rathaus: </b><br>
+    21:07 21:15 21:24 21:34 21:44 21:54 <br>
+    22:04 22:14 22:24 22:44 <br>
+    23:04 23:24 23:44 <br>
+    00:04 00:24 <br>
+    Unser Hotel liegt an der Haltestelle <b>Corneliusbrücke</b>.
+  </p>
+
+
 </app-block>
 
