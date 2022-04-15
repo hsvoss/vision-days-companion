@@ -13,21 +13,34 @@ export class BusApiService {
 
   rides: BehaviorSubject<Ride[]> = new BehaviorSubject<Ride[]>(defaultData);
   everyMinute$: Observable<number> = interval(60 * 1000);
+  connection: 'initial' | 'online' | 'offline' = 'initial'
 
 
   constructor(private http: HttpClient) {
-    console.log()
   }
 
   public startCallCyle() {
+    this.connection = 'initial'
     this.doCall()
-      .then(rides => this.rides.next(rides))
-      .catch(reason => console.log(reason))
+      .then(rides => {
+        this.rides.next(rides);
+        this.connection = 'online'
+      })
+      .catch(reason => {
+        console.log(reason);
+        this.connection = 'offline'
+      })
 
     return this.everyMinute$.subscribe(() => {
       this.doCall()
-        .then(rides => this.rides.next(rides))
-        .catch(reason => console.log(reason))
+        .then(rides => {
+          this.rides.next(rides);
+          this.connection = 'online'
+        })
+        .catch(reason => {
+          console.log(reason);
+          this.connection = 'offline'
+        })
     });
   }
 
@@ -44,6 +57,7 @@ export class BusApiService {
   private static sort(rides: Ride[]): Ride[] {
     // @ts-ignore
     return rides.sort((ride1: Ride, ride2: Ride) => ride1.plannedDeparture - ride2.plannedDeparture);
+
   }
 
   private static mapResponse(response: any): Ride[] {
