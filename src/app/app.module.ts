@@ -20,6 +20,8 @@ import {ImpressumComponent} from './components/technical/impressum/impressum.com
 import {NgxSpinnerModule} from "ngx-spinner";
 import {InstallPromptComponent} from './components/technical/ios-promt/install-prompt.component';
 import {FaqComponent} from './components/faq/faq.component';
+import {BusplanComponent} from './components/busplan/busplan.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -36,20 +38,21 @@ import {FaqComponent} from './components/faq/faq.component';
     SessionComponent,
     ImpressumComponent,
     InstallPromptComponent,
-    FaqComponent
+    FaqComponent,
+    BusplanComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

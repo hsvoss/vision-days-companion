@@ -25,47 +25,7 @@ nav {
     background: $blue-dark;
     width: 100%;
 
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: $blue-medium;
-      //height: 6vh;
-      color: white;
-      border: 7px solid $blue-light;
-      border-radius: 7px;
-      //font-size: 3vh;
-      font-size: 18px;
-      margin-right: 2vh;
-      margin-left: 1vh;
 
-
-      &.active, &:hover {
-        background: white;
-        color: $blue-dark;
-        font-weight: bolder;
-        border-color: $blue-medium;
-      }
-    }
-
-
-    @media (min-height: 400px) {
-      button {
-        font-size: 22px;
-      }
-    }
-
-    @media (min-height: 600px) {
-      button {
-        font-size: 28px;
-      }
-    }
-
-    @media (min-height: 800px) {
-      button {
-        font-size: 36px;
-      }
-    }
   }
 
 }
