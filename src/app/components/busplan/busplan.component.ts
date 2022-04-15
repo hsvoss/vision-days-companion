@@ -1,14 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {BusApiService} from "../../services/bus-api.service";
+import {Subscription} from "rxjs";
 
 export interface Ride {
   nameLine: string;
   direction: string;
   arrival: Date;
-  arrivalDelay: number;
+  arrivalDelay: number | null;
   plannedArrival: Date;
   departure: Date;
-  departureDelay: number;
+  departureDelay: number | null;
   plannedDeparture: Date;
   destination: string;
   origin: string;
@@ -20,74 +21,16 @@ export interface Ride {
   templateUrl: './busplan.component.html',
   styleUrls: ['./busplan.component.scss']
 })
-export class BusplanComponent implements OnInit {
+export class BusplanComponent implements OnInit, OnDestroy {
 
-  rides: Ride[] = []
+  // rides: Ride[] = []
+  private subscription?: Subscription;
 
-  constructor(private http: HttpClient) {
+  constructor(public busApiService: BusApiService) {
   }
 
   async ngOnInit(): Promise<void> {
-    const responses = await Promise.all([this.line200First(), await this.line100First()]);
-
-    this.rides = responses.flatMap(response => BusplanComponent.mapResponse(response));
-
-    // @ts-ignore
-    this.rides.sort((ride1: Ride, ride2: Ride) => ride1.plannedDeparture - ride2.plannedDeparture);
-  }
-
-  private async line100First(): Promise<any> {
-    const response: any = await this.http.get('https://v5.vbb.transport.rest/journeys' +
-      '?results=100' +
-      '&from=900100515' + // Spandauer Str./Marienkirche
-      '&to=900000004151' + // Nordische Botschaften/Adenauer-Stiftung
-      '&stopovers=false' +
-      '&transfers=0' +
-      '&transferTime=0' +
-      '&startWithWalking=false' +
-      '&tickets=false' +
-      '&polylines=false' +
-      '&remarks=false' +
-      '&scheduledDays=false' +
-      '&language=en'
-    ).toPromise();
-    return response;
-  }
-
-  private async line200First(): Promise<any> {
-    const response: any = await this.http.get('https://v5.vbb.transport.rest/journeys' +
-      '?results=100' +
-      '&from=900000100045' + // U Rotes Rathaus
-      '&to=900000005102' + // Corneliusbrücke
-      '&stopovers=false' +
-      '&transfers=0' +
-      '&transferTime=0' +
-      '&startWithWalking=false' +
-      '&tickets=false' +
-      '&polylines=false' +
-      '&remarks=false' +
-      '&scheduledDays=false' +
-      '&language=en'
-    ).toPromise();
-    return response;
-  }
-
-  private static mapResponse(response: any): Ride[] {
-    return response.journeys
-      .filter((journey: { legs: any[]; }) => (journey.legs).length === 1)
-      .map((journey: { legs: any[]; }) => journey.legs[0])
-      .map((leg: any) => ({
-        nameLine: leg.line.name,
-        direction: leg.direction,
-        arrival: new Date(leg.arrival),
-        arrivalDelay: leg.arrivalDelay,
-        plannedArrival: new Date(leg.plannedArrival),
-        departure: new Date(leg.departure),
-        departureDelay: leg.departureDelay,
-        plannedDeparture: new Date(leg.plannedDeparture),
-        destination: leg.destination.name.replace('/', ' / '),
-        origin: leg.origin.name.replace('/', ' / '),
-      }));
+    this.subscription = this.busApiService.startCallCyle();
   }
 
 
@@ -95,7 +38,7 @@ export class BusplanComponent implements OnInit {
     return ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2)
   }
 
-  delayToString(departureDelay: number): string {
+  delayToString(departureDelay: number | null): string {
     if (!departureDelay || departureDelay === 0) {
       return ''
     } else if (departureDelay > 0) {
@@ -111,5 +54,9 @@ export class BusplanComponent implements OnInit {
     const minutes = Math.floor((diff / 1000) / 60);
     return minutes.toString() + ' min'
 
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 }

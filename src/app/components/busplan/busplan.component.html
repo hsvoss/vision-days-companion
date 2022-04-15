@@ -13,7 +13,7 @@
     <h2>Ankunft</h2>
   </div>
 
-  <div class="ride" *ngFor="let ride of rides">
+  <div class="ride" *ngFor="let ride of busApiService.rides | async">
     <div class="horizontal-line"></div>
 
     <div class="header">
