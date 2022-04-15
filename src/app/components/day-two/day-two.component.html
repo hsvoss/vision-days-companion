@@ -24,27 +24,38 @@
   <h2>Rückweg</h2>
   <p>
     Dies ist Open-End Veranstaltung. Daher bitten wir euch den Rückweg selbst zu organisieren. Ihr könnt entweder einen einstündigen
-    Spaziergang unternehmen oder die öffentlichen Verkehrsmittel nutzen.
+    Spaziergang unternehmen oder die öffentlichen Verkehrsmittel nutzen. Preis: 3,00 Euro
   </p>
 
-  <div class="inline">
-    <img alt="email" src="/assets/icons/bus-solid.svg"/>
-    <a
-      href="https://www.bvg.de/de/verbindungen/verbindungssuche?SID=A%3D2%40O%3D10178%2520Berlin-Mitte%2C%2520Rathausstr.%252023%40X%3D13404939%40Y%3D52517490%40U%3D103%40L%3D770007158%40B%3D1%40p%3D1592347662%40&ZID=A%3D2%40O%3D10787%2520Berlin-Tiergarten%2C%2520St%25C3%25BClerstr.%25206%40X%3D13349197%40Y%3D52508258%40U%3D103%40L%3D770002372%40B%3D1%40p%3D1592347662%40&timeSel=depart&time=22%3A00&date=19.05.2022&start=1"
-      target="_blank">
-      Hier ist der Busfahrplan
-    </a>
-  </div>
-  <br>
+  <button routerLink="/bus" routerLinkActive="active" style="width: 50%; min-width: fit-content; max-width: 600px; align-self: center"
+          [routerLinkActiveOptions]={exact:true}>
+    Busfahrplan
+  </button>
 
-  <p>
-    Planmäßige Abfahrtszeiten der <b>Buslinie 200</b> in Richtung Zoologischer Garten an der Haltestelle <b>U Rotes Rathaus: </b><br>
-    21:07 21:15 21:24 21:34 21:44 21:54 <br>
-    22:04 22:14 22:24 22:44 <br>
-    23:04 23:24 23:44 <br>
-    00:04 00:24 <br>
-    Unser Hotel liegt an der Haltestelle <b>Corneliusbrücke</b>.
-  </p>
+  <!--  <button>-->
+  <!--    <img alt="bus" src="/assets/icons/bus-solid.svg" height="16"/>-->
+  <!--    Hier ist der-->
+  <!--    <br>-->
+  <!--  </button>-->
+
+  <!--  <div class="inline">-->
+  <!--    <img alt="bus" src="/assets/icons/bus-solid.svg"/>-->
+  <!--    <a-->
+  <!--      href="https://www.bvg.de/de/verbindungen/verbindungssuche?SID=A%3D2%40O%3D10178%2520Berlin-Mitte%2C%2520Rathausstr.%252023%40X%3D13404939%40Y%3D52517490%40U%3D103%40L%3D770007158%40B%3D1%40p%3D1592347662%40&ZID=A%3D2%40O%3D10787%2520Berlin-Tiergarten%2C%2520St%25C3%25BClerstr.%25206%40X%3D13349197%40Y%3D52508258%40U%3D103%40L%3D770002372%40B%3D1%40p%3D1592347662%40&timeSel=depart&time=22%3A00&date=19.05.2022&start=1"-->
+  <!--      target="_blank">-->
+  <!--      Hier ist der Busfahrplan-->
+  <!--    </a>-->
+  <!--  </div>-->
+  <!--  <br>-->
+
+  <!--  <p>-->
+  <!--    Planmäßige Abfahrtszeiten der <b>Buslinie 200</b> in Richtung Zoologischer Garten an der Haltestelle <b>U Rotes Rathaus: </b><br>-->
+  <!--    21:07 21:15 21:24 21:34 21:44 21:54 <br>-->
+  <!--    22:04 22:14 22:24 22:44 <br>-->
+  <!--    23:04 23:24 23:44 <br>-->
+  <!--    00:04 00:24 <br>-->
+  <!--    Unser Hotel liegt an der Haltestelle <b>Corneliusbrücke</b>.-->
+  <!--  </p>-->
 
 
 </app-block>
