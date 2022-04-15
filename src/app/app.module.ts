@@ -20,6 +20,7 @@ import {ImpressumComponent} from './components/technical/impressum/impressum.com
 import {NgxSpinnerModule} from "ngx-spinner";
 import {InstallPromptComponent} from './components/technical/ios-promt/install-prompt.component';
 import {FaqComponent} from './components/faq/faq.component';
+import {BusplanComponent} from './components/busplan/busplan.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {FaqComponent} from './components/faq/faq.component';
     SessionComponent,
     ImpressumComponent,
     InstallPromptComponent,
-    FaqComponent
+    FaqComponent,
+    BusplanComponent
   ],
   imports: [
     BrowserModule,
