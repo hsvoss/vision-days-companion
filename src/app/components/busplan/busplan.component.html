@@ -13,9 +13,6 @@
     <h2>Ankunft</h2>
   </div>
 
-  <div class="table-header horizontal-line" *ngIf="busApiService.connection === 'initial'">
-    <p>Fahrplan wird aktualisiert...</p>
-  </div>
   <div class="table-header horizontal-line" *ngIf="busApiService.connection === 'offline'">
     <p>Du hast gerade kein Netz. Der Fahrplan ist nicht aktuell.</p>
   </div>
