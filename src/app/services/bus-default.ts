@@ -3,7 +3,7 @@ import {Ride} from "../components/busplan/busplan.component";
 export const defaultData: Ride[] = [{
   "nameLine": "100",
   "direction": "S+U Zoologischer Garten",
-  "arrival": new Date('2022-06-19T20:14:00.000Z"'),
+  "arrival": new Date('2022-06-19T20:14:00.000Z'),
   "arrivalDelay": null,
   "plannedArrival": new Date('2022-06-19T20:14:00.000Z'),
   "departure": new Date('2022-06-19T20:01:00.000Z'),
