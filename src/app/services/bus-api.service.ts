@@ -22,7 +22,8 @@ export class BusApiService {
   public startCallCyle() {
 
     this.connection = 'initial'
-    this.rides.next(defaultData.filter(rides => rides.departure.getTime() > new Date().getTime()))
+    const filteredDefault = defaultData.filter(rides => rides.departure.getTime() > new Date().getTime());
+    this.rides.next(filteredDefault)
 
 
     this.doCall()
