@@ -1,56 +1,59 @@
 <div class="card">
+
   <div class="inline" style="align-self: center">
     <img alt="bus" src="/assets/icons/bus-solid.svg"/>
     <h1>Abfahrtmonitor</h1>
   </div>
 
-  <div class="table-header">
-    <h2>Abfahrt</h2>
-    <p style="text-align: center">Richtung
-      <wbr>
-      Zoologischer Garten
-    </p>
-    <h2>Ankunft</h2>
+  <div class="linie-coins">
+    <div class="line-wrapper">
+      <p>Linie</p>
+      <div class="line">200</div>
+      <div class="bus-horizontal"></div>
+    </div>
+    <div class="coins">
+      <img alt="coins" src="/assets/icons/coins-solid.svg" height="16"/>
+      <p> 3,00 € </p>
+    </div>
   </div>
 
-  <div class="table-header horizontal-line" *ngIf="busApiService.connection === 'offline'">
-    <p>Du hast gerade kein Netz. Der Fahrplan ist nicht aktuell.</p>
+  <p style="text-align: center; color: gray">Richtung
+    <wbr>
+    Zoologischer Garten
+  </p>
+
+  <div class="table-header">
+    <h2>U Rotes Rathaus</h2>
+    <h2 style="text-align: right">Corneliusbrücke</h2>
+  </div>
+
+
+  <div class="loading horizontal-line" *ngIf="busApiService.connection === 'initial'">
+    <ngx-spinner [name]="'bus-spinner'" [fullScreen]="false" size="medium" type="ball-pulse">
+    </ngx-spinner>
+  </div>
+
+  <div class="horizontal-line" *ngIf="busApiService.connection === 'offline'">
+    <p class="delay">Du hast gerade kein Netz. Um Verspätungen zu sehen, stelle bitte eine Verbindung zum Internet her.</p>
   </div>
 
   <div class="ride" *ngFor="let ride of busApiService.rides | async">
     <div class="horizontal-line"></div>
 
-    <div class="header">
-      <div>{{ride.origin}}</div>
-      <div style="text-align: right">{{ride.destination}}</div>
-    </div>
-
-
     <div class="footer">
       <div class="clock" style="align-items: flex-start">
-        <div class="delay">{{delayToString(ride.departureDelay)}}</div>
         <div>{{dateToClock(ride.plannedDeparture)}}</div>
+        <div class="delay">{{delayToString(ride.departureDelay)}}</div>
       </div>
-      <div class="middle">
-        <div class="line-wrapper">
-          <p>Linie</p>
-          <div class="line">{{ride.nameLine}}</div>
-          <div class="bus-horizontal"></div>
-        </div>
-        <div class="additional-info">
-          <div>
-            <img alt="coins" src="/assets/icons/coins-solid.svg" height="16"/>
-            <p>3,00 €</p>
-          </div>
-          <div>
-            <img alt="stopwatch" src="/assets/icons/stopwatch-solid.svg" height="16"/>
-            <p>{{calcRideTime(ride)}}</p>
-          </div>
-        </div>
+
+      <div class="stopwatch">
+        <img alt="stopwatch" src="/assets/icons/stopwatch-solid.svg" height="16"/>
+        <p>{{calcRideTime(ride)}}</p>
       </div>
+
       <div class="clock" style="align-items: flex-end">
-        <div class="delay">{{delayToString(ride.arrivalDelay)}}</div>
         <div>{{dateToClock(ride.plannedArrival)}}</div>
+        <div class="delay">{{delayToString(ride.arrivalDelay)}}</div>
       </div>
     </div>
   </div>

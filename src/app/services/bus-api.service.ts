@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Ride} from "../components/busplan/busplan.component";
 import {BehaviorSubject, interval, Observable} from "rxjs";
 import {defaultData} from "./bus-default";
+import {NgxSpinnerService} from "ngx-spinner";
 
 
 @Injectable({
@@ -16,19 +17,23 @@ export class BusApiService {
   connection: 'initial' | 'online' | 'offline' = 'initial'
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private spinnerService: NgxSpinnerService) {
   }
 
   public startCallCyle() {
+    this.spinnerService.show('bus-spinner');
+
     this.connection = 'initial'
     this.doCall()
       .then(rides => {
         this.rides.next(rides);
         this.connection = 'online'
+        this.spinnerService.hide('bus-spinner');
       })
       .catch(reason => {
         console.log(reason);
         this.connection = 'offline'
+        this.spinnerService.hide('bus-spinner');
       })
 
     return this.everyMinute$.subscribe(() => {
@@ -46,11 +51,19 @@ export class BusApiService {
 
 
   private async doCall(): Promise<Ride[]> {
-    const responses = await Promise.all([this.line200First(), await this.line100First()]);
-    const rides: Ride[] = responses.flatMap(response => BusApiService.mapResponse(response));
+    const response1 = await this.line200First();
+    const response2 = await this.line200Later(response1.laterRef);
+    const response3 = await this.line200Later(response2.laterRef);
+
+    const responses = await Promise.all([response1, response2, response3]);
+    let rides: Ride[] = responses.flatMap(response => BusApiService.mapResponse(response));
+    // const rides: Ride[] = BusApiService.mapResponse(response);
 
     // @ts-ignore
     rides.sort((ride1: Ride, ride2: Ride) => ride1.plannedDeparture - ride2.plannedDeparture);
+    rides = rides.filter(rides => rides.departure.getTime() > new Date().getTime())
+
+
     return rides
   }
 
@@ -97,10 +110,18 @@ export class BusApiService {
   }
 
   private async line200First(): Promise<any> {
+    const departure = new Date();
+
+    departure.setHours(20)
+    departure.setMinutes(30)
+    departure.setSeconds(0)
+
     return await this.http.get('https://v5.vbb.transport.rest/journeys' +
       '?results=100' +
       '&from=900000100045' + // U Rotes Rathaus
       '&to=900000005102' + // Corneliusbrücke
+      // '&departure=' + new Date(2022, 4, 16, 20, 30, 0).toISOString() +
+      '&departure=' + departure.toISOString() +
       '&stopovers=false' +
       '&transfers=0' +
       '&transferTime=0' +
@@ -114,4 +135,21 @@ export class BusApiService {
   }
 
 
+  private async line200Later(laterRef: string): Promise<any> {
+    return await this.http.get('https://v5.vbb.transport.rest/journeys' +
+      '?results=100' +
+      '&from=900000100045' + // U Rotes Rathaus
+      '&to=900000005102' + // Corneliusbrücke
+      '&laterThan=' + encodeURIComponent(laterRef) +
+      '&stopovers=false' +
+      '&transfers=0' +
+      '&transferTime=0' +
+      '&startWithWalking=false' +
+      '&tickets=false' +
+      '&polylines=false' +
+      '&remarks=false' +
+      '&scheduledDays=false' +
+      '&language=en'
+    ).toPromise();
+  }
 }
