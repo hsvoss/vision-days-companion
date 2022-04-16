@@ -23,7 +23,6 @@ export interface Ride {
 })
 export class BusplanComponent implements OnInit, OnDestroy {
 
-  // rides: Ride[] = []
   private subscription?: Subscription;
 
   constructor(public busApiService: BusApiService) {

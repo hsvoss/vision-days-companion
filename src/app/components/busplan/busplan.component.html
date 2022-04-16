@@ -28,15 +28,6 @@
   </div>
 
 
-  <div class="loading horizontal-line" *ngIf="busApiService.connection === 'initial'">
-    <ngx-spinner [name]="'bus-spinner'" [fullScreen]="false" size="medium" type="ball-pulse">
-    </ngx-spinner>
-  </div>
-
-  <div class="horizontal-line" *ngIf="busApiService.connection === 'offline'">
-    <p class="delay">Du hast gerade kein Netz. Um Verspätungen zu sehen, stelle bitte eine Verbindung zum Internet her.</p>
-  </div>
-
   <div class="ride" *ngFor="let ride of busApiService.rides | async">
     <div class="horizontal-line"></div>
 

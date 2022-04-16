@@ -3,7 +3,6 @@ import {HttpClient} from "@angular/common/http";
 import {Ride} from "../components/busplan/busplan.component";
 import {BehaviorSubject, interval, Observable} from "rxjs";
 import {defaultData} from "./bus-default";
-import {NgxSpinnerService} from "ngx-spinner";
 
 
 @Injectable({
@@ -17,23 +16,20 @@ export class BusApiService {
   connection: 'initial' | 'online' | 'offline' = 'initial'
 
 
-  constructor(private http: HttpClient, private spinnerService: NgxSpinnerService) {
+  constructor(private http: HttpClient) {
   }
 
   public startCallCyle() {
-    this.spinnerService.show('bus-spinner');
 
     this.connection = 'initial'
     this.doCall()
       .then(rides => {
         this.rides.next(rides);
         this.connection = 'online'
-        this.spinnerService.hide('bus-spinner');
       })
       .catch(reason => {
         console.log(reason);
         this.connection = 'offline'
-        this.spinnerService.hide('bus-spinner');
       })
 
     return this.everyMinute$.subscribe(() => {
