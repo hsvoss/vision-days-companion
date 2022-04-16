@@ -57,21 +57,14 @@ export class BusApiService {
 
     const responses = await Promise.all([response1, response2, response3]);
     let rides: Ride[] = responses.flatMap(response => BusApiService.mapResponse(response));
-    // const rides: Ride[] = BusApiService.mapResponse(response);
 
     // @ts-ignore
     rides.sort((ride1: Ride, ride2: Ride) => ride1.plannedDeparture - ride2.plannedDeparture);
     rides = rides.filter(rides => rides.departure.getTime() > new Date().getTime())
 
-
     return rides
   }
 
-  private static sort(rides: Ride[]): Ride[] {
-    // @ts-ignore
-    return rides.sort((ride1: Ride, ride2: Ride) => ride1.plannedDeparture - ride2.plannedDeparture);
-
-  }
 
   private static mapResponse(response: any): Ride[] {
     return response.journeys
@@ -92,22 +85,22 @@ export class BusApiService {
   }
 
 
-  private async line100First(): Promise<any> {
-    return await this.http.get('https://v5.vbb.transport.rest/journeys' +
-      '?results=100' +
-      '&from=900100515' + // Spandauer Str./Marienkirche
-      '&to=900000004151' + // Nordische Botschaften/Adenauer-Stiftung
-      '&stopovers=false' +
-      '&transfers=0' +
-      '&transferTime=0' +
-      '&startWithWalking=false' +
-      '&tickets=false' +
-      '&polylines=false' +
-      '&remarks=false' +
-      '&scheduledDays=false' +
-      '&language=en'
-    ).toPromise();
-  }
+  // private async line100First(): Promise<any> {
+  //   return await this.http.get('https://v5.vbb.transport.rest/journeys' +
+  //     '?results=100' +
+  //     '&from=900100515' + // Spandauer Str./Marienkirche
+  //     '&to=900000004151' + // Nordische Botschaften/Adenauer-Stiftung
+  //     '&stopovers=false' +
+  //     '&transfers=0' +
+  //     '&transferTime=0' +
+  //     '&startWithWalking=false' +
+  //     '&tickets=false' +
+  //     '&polylines=false' +
+  //     '&remarks=false' +
+  //     '&scheduledDays=false' +
+  //     '&language=en'
+  //   ).toPromise();
+  // }
 
   private async line200First(): Promise<any> {
     const departure = new Date();
