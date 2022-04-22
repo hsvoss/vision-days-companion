@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private promptUpdateService: PromptUpdateService,
               private checkForUpdateService: CheckForUpdateService,
               public breakpointObserver: BreakpointObserver,
-              private navigationService: DrawerService) {
+              private drawerService: DrawerService) {
   }
 
 
@@ -25,12 +25,18 @@ export class AppComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         this.widescreenMode = state.matches;
         if (this.widescreenMode) {
-          this.navigationService.setShowDrawer(false)
+          this.drawerService.setShowDrawer(false)
         }
       });
   }
 
   toggleSidebar() {
-    this.navigationService.toggleDrawer()
+    this.drawerService.toggleDrawer()
   }
+
+
+  onClick() {
+    this.drawerService.setShowDrawer(false)
+  }
+
 }

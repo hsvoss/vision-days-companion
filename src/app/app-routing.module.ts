@@ -11,11 +11,15 @@ import {BusplanComponent} from "./components/busplan/busplan.component";
 const routes: Routes = [
   {path: '', component: LocationComponent},
   {path: 'faq', component: FaqComponent},
-  {path: 'day-one', component: DayOneComponent},
-  {path: 'day-two', component: DayTwoComponent},
-  {path: 'day-three', component: DayThreeComponent},
+  {path: '18-mai', component: DayOneComponent},
+  {path: '19-mai', component: DayTwoComponent},
+  {path: '20-mai', component: DayThreeComponent},
   {path: 'impressum', component: ImpressumComponent},
   {path: 'bus', component: BusplanComponent},
+  {path: 'day-one', redirectTo: '18-mai'},
+  {path: 'day-two', redirectTo: '19-mai'},
+  {path: 'day-three', redirectTo: '20-mai'},
+  {path: '**', redirectTo: ''},
 ];
 
 @NgModule({

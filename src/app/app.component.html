@@ -1,5 +1,6 @@
 <div class="header">
-  <img alt="Logo" class="logo-img" src="/assets/theme/Vision-Days.png">
+  <img alt="Logo" class="logo-img" src="/assets/theme/Vision-Days.png" routerLink="/" routerLinkActive="active"
+       [routerLinkActiveOptions]={exact:true} (click)="onClick()">
   <span (click)="toggleSidebar()" *ngIf="!widescreenMode">
     <img alt="menu" height="100%" src="/assets/icons/burger.svg">
   </span>
