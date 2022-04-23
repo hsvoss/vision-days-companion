@@ -7,6 +7,22 @@
   gap: 1vh;
 }
 
+h2, h3 {
+  margin-top: 2vh;
+  margin-bottom: 0;
+}
+
 a {
   margin: 0;
+}
+
+.personen {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-top: 0.5vh;
+
+  p, a {
+    margin: 0.5vh 1vw;
+  }
 }
