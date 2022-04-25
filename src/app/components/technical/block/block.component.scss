@@ -9,7 +9,6 @@
   &:not(.food) {
     background: white;
   }
-
 }
 
 .header {
@@ -19,11 +18,12 @@
   div {
     display: flex;
     align-items: flex-start;
+    padding: 0 1vw;
   }
 
 
   img {
-    margin: 1vh 0 1vh 1vw;
+    margin: 1vh 0 1vh 0;
     height: 22px;
     width: auto;
     z-index: 0;
@@ -59,7 +59,7 @@
 
 
   .time {
-    margin: 1vh 1vw;
+    margin: 1vh 0;
     color: gray;
   }
 
@@ -84,6 +84,7 @@
 .content-wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0 1vw;
 }
 
 .collapsible {

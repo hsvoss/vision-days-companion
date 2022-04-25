@@ -26,6 +26,8 @@ body {
 
 .horizontal-line {
   border-top: 3px solid $blue-light;
+  margin-left: -1vw;
+  margin-right: -1vw;
 }
 
 .food {
@@ -47,7 +49,7 @@ body {
 
   padding-left: 1vw;
   padding-right: 1vw;
-  padding-bottom: 1vh;
+  padding-bottom: 0;
   border: 5px solid $blue-light;
   border-radius: 1vh;
   background: white;
@@ -58,9 +60,8 @@ body {
 
 .inline {
   display: flex;
-  padding-left: 1vw;
-  padding-right: 1vw;
   height: calc(16px + 2vh);
+  gap: 1rem;
 
   img {
     height: 100%;
@@ -159,7 +160,7 @@ h1 {
 
 
 h1, h2, h3, p, a {
-  margin: 1vh 1vw;
+  margin: 1vh 0;
 }
 
 button {

@@ -1,14 +1,28 @@
+<div class="card">
+  <div class="header">
+    <div>
+      <h1>Fotoshooting</h1>
+      <img alt="maps" src="/assets/icons/camera-solid.svg" height="16"/>
+    </div>
+    <div class="time">All Day</div>
+  </div>
+  <p>Am heutigen Tag begleitet uns ein Fotograf.</p>
+</div>
+
+
 <app-block beginn="8:30" end="10:45" heading="Reichstagskuppel" room="Lobby">
   <p>Wir unternehmen einen Spaziergang durch den Tiergarten und besichtigen die Reichstagskuppel.
-    Wir treffen uns um 8:30 Uhr in der Lobby. Bitte tragt adäquates Schuhwerk und bringt euren
-    <b>Personalausweis</b> oder Pass mit.</p>
+    Dazu treffen wir uns in der Lobby und laufen um 8:30 Uhr gemeinsam los. Bitte tragt adäquates Schuhwerk und bringt
+    euren <b>Personalausweis</b> oder Pass mit.</p>
 </app-block>
 
-<app-block beginn="10:45" end="13:00" heading="Einführung World Café" room="Atlantik" speaker="Florian Grolman"></app-block>
+<app-block beginn="10:45" end="13:00" heading="Einführung World Café" room="Atlantik"
+           speaker="Florian Grolman"></app-block>
 <app-block beginn="13:00" class="food" end="14:00" heading="Mittagessen" room="Restaurant"
            speaker="Buffet im Hotel"></app-block>
 
-<app-block beginn="14:00" end="15:00" heading="Rhythmische Sportgymnastik" room="Atlantik" speaker="Niels & Uwe"></app-block>
+<app-block beginn="14:00" end="15:00" heading="Rhythmische Gymnastik" room="Atlantik"
+           speaker="Niels & Uwe"></app-block>
 <!--<app-block beginn="14:00" end="15:00" heading="Drum Conversation" room="Atlantik" speaker="Ismael Seck"></app-block>-->
 
 <app-block beginn="15:00" end="18:00" heading="World Café: Quo vadis VISION?" room="Atlantik"
@@ -18,45 +32,22 @@
 </app-block>
 
 <app-block beginn="18:00" end="19:00" heading="Humorinstitut" room="Atlantik" speaker="Eva Ullmann"></app-block>
-<app-block beginn="19:00" class="food" end="Open End" heading="Abendessen & Gin Tasting" room="Lobby" speaker="4-Gänge-Menü">
-  <p>Unser Abendprogramm findet in der Nähe der Rathausbrücke statt. Wir treffen uns um 19:00 Uhr in der Lobby und fahren gemeinsam dort
+<app-block beginn="19:00" class="food" end="Open End" heading="Abendessen & Gin Tasting" room="Lobby"
+           speaker="4-Gänge-Menü">
+  <p>Unser Abendprogramm findet in der Nähe der Rathausbrücke statt. Wir treffen uns um 19:00 Uhr in der Lobby und
+    fahren gemeinsam dort
     hin.</p>
   <h2>Rückweg</h2>
   <p>
-    Dies ist Open-End Veranstaltung. Daher bitten wir euch den Rückweg selbst zu organisieren. Ihr könnt entweder einen einstündigen
-    Spaziergang unternehmen oder die öffentlichen Verkehrsmittel nutzen. Preis: 3,00 Euro
+    Dies ist Open-End Veranstaltung. Daher bitten wir euch den Rückweg selbst zu organisieren. Ihr könnt entweder einen
+    einstündigen Spaziergang unternehmen oder die öffentlichen Verkehrsmittel nutzen. Preis: 3,00 Euro
   </p>
 
-  <button routerLink="/bus" routerLinkActive="active" style="width: 50%; min-width: fit-content; max-width: 600px; align-self: center"
+  <button routerLink="/bus" routerLinkActive="active"
+          style="width: 50%; min-width: fit-content; max-width: 600px; align-self: center"
           [routerLinkActiveOptions]={exact:true}>
     Busfahrplan
   </button>
-
-  <!--  <button>-->
-  <!--    <img alt="bus" src="/assets/icons/bus-solid.svg" height="16"/>-->
-  <!--    Hier ist der-->
-  <!--    <br>-->
-  <!--  </button>-->
-
-  <!--  <div class="inline">-->
-  <!--    <img alt="bus" src="/assets/icons/bus-solid.svg"/>-->
-  <!--    <a-->
-  <!--      href="https://www.bvg.de/de/verbindungen/verbindungssuche?SID=A%3D2%40O%3D10178%2520Berlin-Mitte%2C%2520Rathausstr.%252023%40X%3D13404939%40Y%3D52517490%40U%3D103%40L%3D770007158%40B%3D1%40p%3D1592347662%40&ZID=A%3D2%40O%3D10787%2520Berlin-Tiergarten%2C%2520St%25C3%25BClerstr.%25206%40X%3D13349197%40Y%3D52508258%40U%3D103%40L%3D770002372%40B%3D1%40p%3D1592347662%40&timeSel=depart&time=22%3A00&date=19.05.2022&start=1"-->
-  <!--      target="_blank">-->
-  <!--      Hier ist der Busfahrplan-->
-  <!--    </a>-->
-  <!--  </div>-->
-  <!--  <br>-->
-
-  <!--  <p>-->
-  <!--    Planmäßige Abfahrtszeiten der <b>Buslinie 200</b> in Richtung Zoologischer Garten an der Haltestelle <b>U Rotes Rathaus: </b><br>-->
-  <!--    21:07 21:15 21:24 21:34 21:44 21:54 <br>-->
-  <!--    22:04 22:14 22:24 22:44 <br>-->
-  <!--    23:04 23:24 23:44 <br>-->
-  <!--    00:04 00:24 <br>-->
-  <!--    Unser Hotel liegt an der Haltestelle <b>Corneliusbrücke</b>.-->
-  <!--  </p>-->
-
 
 </app-block>
 
