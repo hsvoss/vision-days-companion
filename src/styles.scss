@@ -39,6 +39,14 @@ body {
   font-size: 16px;
 }
 
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: blue;
+}
+
 @media (min-width: 320px) {
   p {
     text-align: justify;
