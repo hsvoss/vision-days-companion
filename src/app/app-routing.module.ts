@@ -7,6 +7,7 @@ import {DayThreeComponent} from "./components/day-three/day-three.component";
 import {ImpressumComponent} from "./components/technical/impressum/impressum.component";
 import {FaqComponent} from './components/faq/faq.component';
 import {BusplanComponent} from "./components/busplan/busplan.component";
+import {OptOutComponent} from "./components/opt-out/opt-out.component";
 
 const routes: Routes = [
   {path: '', component: LocationComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: '20-mai', component: DayThreeComponent},
   {path: 'impressum', component: ImpressumComponent},
   {path: 'bus', component: BusplanComponent},
+  {path: 'out-out', component: OptOutComponent},
   {path: 'day-one', redirectTo: '18-mai'},
   {path: 'day-two', redirectTo: '19-mai'},
   {path: 'day-three', redirectTo: '20-mai'},
