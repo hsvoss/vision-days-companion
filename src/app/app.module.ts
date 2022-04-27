@@ -22,6 +22,7 @@ import {InstallPromptComponent} from './components/technical/ios-promt/install-p
 import {FaqComponent} from './components/faq/faq.component';
 import {BusplanComponent} from './components/busplan/busplan.component';
 import {HttpClientModule} from "@angular/common/http";
+import {OptOutComponent} from './components/opt-out/opt-out.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {HttpClientModule} from "@angular/common/http";
     InstallPromptComponent,
     FaqComponent,
     BusplanComponent,
+    OptOutComponent,
   ],
   imports: [
     BrowserModule,
