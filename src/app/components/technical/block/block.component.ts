@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {animate, AUTO_STYLE, state, style, transition, trigger} from "@angular/animations";
+import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
 
 const DEFAULT_DURATION: number = 600;
 
@@ -27,17 +28,27 @@ export class BlockComponent implements OnInit {
   @Input() beginn: string = "";
   @Input() end: string = "";
   @Input() speaker: string = "";
+  @Input() speakerLong: string | undefined = undefined;
   @Input() room: string = "";
 
   @Input() collapsible: boolean = false;
   collapsed: boolean = false;
 
-  constructor() {
+
+  allowLongSpeaker: boolean = false;
+
+  constructor(public breakpointObserver: BreakpointObserver,) {
   }
 
   ngOnInit(): void {
     this.collapsed = this.collapsible;
+    this.breakpointObserver
+      .observe(['(min-width: 500px)'])
+      .subscribe((state: BreakpointState) => {
+        this.allowLongSpeaker = state.matches;
+      });
   }
+
 
   toggleCollapse() {
     if (this.collapsible) {

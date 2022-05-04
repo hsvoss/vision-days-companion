@@ -5,7 +5,11 @@
 <ng-content></ng-content>
 <div *ngIf="room !=='' || speaker !=='' || end !==''" class="footer">
   <div class="room">{{room}}</div>
-  <div class="speaker">{{speaker}}</div>
+  <div *ngIf="speakerLong !== undefined && speakerLong !=='' && allowLongSpeaker; else shortSpeaker"
+       class="speaker">{{speakerLong}}</div>
+  <ng-template #shortSpeaker>
+    <div class="speaker">{{speaker}}</div>
+  </ng-template>
   <div class="time">{{end}}</div>
 </div>
 

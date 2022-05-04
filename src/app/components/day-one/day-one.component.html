@@ -6,7 +6,8 @@
 </app-block>
 
 <app-block beginn="13:00" end="13:15" heading="Begrüßung" room="Atlantik I+II"></app-block>
-<app-block beginn="13:20" end="13:50" heading="Warm Up" room="Atlantik I+II" speaker="Annett Heine-Puppe"></app-block>
+<app-block beginn="13:20" end="13:50" heading="Warm Up" room="Atlantik I+II" speaker="Annett"
+           speakerLong="Annett Heine-Puppe"></app-block>
 <app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BC" room="Atlantik I">
   <app-session heading="Agenda in Planung..."></app-session>
   <app-session beginn="16:00 - 16:30" class="food" heading="Kaffeepause"></app-session>
@@ -24,31 +25,35 @@
 </app-block>
 <app-block [collapsible]="true" beginn="14:00" end="18:00" heading="Bereichsmeeting BO" room="Atlantik III">
   <app-session beginn="14:00" end="14:30" heading="Begrüßung / Fakten und Zahlen"
-               speaker="Tobias, Niels & Uwe"></app-session>
+               speaker="Tobias, Niels & Uwe"
+               speakerLong="Tobias Homey, Niels Kunath & Uwe Backes"
+
+  ></app-session>
   <app-session beginn="14:30" end="14:45" heading="Übersicht über Zuständigkeiten im Back Office (nach Aktualisierung)"
                speaker="Uwe Backes"></app-session>
   <app-session beginn="14:45" end="15:15"
                heading="IT-Umfeld (Stand aufbauend Vorstellung letztes Meeting, Pilot &quot;Onboarding&quot; im SharePoint"
                speaker="Philipp Schwartz"></app-session>
   <app-session beginn="15:15" end="15:30" heading="Organisatorisch (Auswertung Umfrage, To-Do's Back Office)"
-               speaker="Tobias & Niels"></app-session>
+               speaker="Tobias & Niels" speakerLong="Tobias Homey & Niels Kunath"></app-session>
   <app-session beginn="15:30" end="16:00" heading="Prozess Faktura &quot;Einführung / Übersicht&quot;"
-               speaker="Katrin & Niels"></app-session>
+               speakerLong="Katrin Jede & Niels Kunath"></app-session>
   <app-session beginn="16:00 - 16:30" class="food" heading="Kaffeepause"></app-session>
   <app-session beginn="16:30" end="17:50" heading="Prozess Faktura - spezielle Themen"
-               speaker="Katrin & Niels"></app-session>
+               speaker="Katrin & Niels" speakerLong="Katrin Jede & Niels Kunath"></app-session>
   <app-session beginn="17:50" end="18:00"
                heading="Ausblick &quot;Teil 2 Faktura&quot; & Feedback-Möglichkeit"
-               speaker="Tobias & Niels"></app-session>
+               speaker="Tobias & Niels" speakerLong="Katrin Jede & Niels Kunath"></app-session>
   <div class="horizontal-line"></div>
 </app-block>
 
 <app-block beginn="18:10" end="19:00" heading="Ideenmanagement" room="Atlantik I+II"
-           speaker="Andreas & Uwe"></app-block>
+           speaker="Andreas & Uwe" speakerLong="Andreas Schumacher & Uwe Backes"></app-block>
 <!--<app-block beginn="18:00" end="19:00" heading="Ideenmanagement" room="Atlantik" speaker="Andreas Peters & Niels Kunath"></app-block>-->
 <app-block beginn="19:00" end="20:00" heading="Abendessen" room="Restaurant" speaker="Buffet im Hotel"
            class="food"></app-block>
 
-<app-block beginn="20:00" end="Open End" heading="Feierabendbier" room="Bar & Terrasse" speaker="Uwe & Niels">
+<app-block beginn="20:00" end="Open End" heading="Feierabendbier" room="Bar & Terrasse"
+           speaker="Uwe & Niels" speakerLong="Uwe Backes & Niels Droste">
   <p>mit Prämierung des Ideenmanagements</p>
 </app-block>
