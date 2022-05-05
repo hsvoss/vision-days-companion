@@ -43,16 +43,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1vw;
+  // gap: 1vw;
+  gap: 0;
   min-width: 13rem;
   width: 50%;
-}
-
-.coins {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1vw;
 }
 
 .line {
@@ -61,7 +55,15 @@
   height: fit-content;
   border-radius: 3px;
   padding: 4px;
+  margin-left: 1vw;
 
+}
+
+.coins {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
 }
 
 .bus-horizontal {
