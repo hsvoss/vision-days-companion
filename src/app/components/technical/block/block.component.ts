@@ -43,7 +43,7 @@ export class BlockComponent implements OnInit {
   ngOnInit(): void {
     this.collapsed = this.collapsible;
     this.breakpointObserver
-      .observe(['(min-width: 500px)'])
+      .observe(['(min-width: 470px)'])
       .subscribe((state: BreakpointState) => {
         this.allowLongSpeaker = state.matches;
       });

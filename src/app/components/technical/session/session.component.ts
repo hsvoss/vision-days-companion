@@ -24,7 +24,7 @@ export class SessionComponent implements OnInit {
 
   ngOnInit(): void {
     this.breakpointObserver
-      .observe(['(min-width: 500px)'])
+      .observe(['(min-width: 470px)'])
       .subscribe((state: BreakpointState) => {
         this.allowLongSpeaker = state.matches;
       });
