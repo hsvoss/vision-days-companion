@@ -11,13 +11,12 @@ export class DayTwoComponent {
   constructor() {
   }
 
-
-  // calcPlaceholder(): 'Placeholder' | 'TimeIsUp' {
-  //   if (new Date() > new Date('2022-04-05T20:15:00.000Z')) {
-  //     return 'TimeIsUp'
-  //   } else {
-  //     return 'Placeholder'
-  //   }
-  // }
+  calcPlaceholder(): 'Placeholder' | 'TimeIsUp' {
+    if (new Date() > new Date(2022, 4, 19, 13, 30)) {
+      return 'TimeIsUp'
+    } else {
+      return 'Placeholder'
+    }
+  }
 
 }
