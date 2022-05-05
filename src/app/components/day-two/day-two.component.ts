@@ -12,12 +12,12 @@ export class DayTwoComponent {
   }
 
 
-  calcPlaceholder(): 'Placeholder' | 'TimeIsUp' {
-    if (new Date() > new Date('2022-05-19T12:45:00.000Z')) {
-      return 'TimeIsUp'
-    } else {
-      return 'Placeholder'
-    }
-  }
+  // calcPlaceholder(): 'Placeholder' | 'TimeIsUp' {
+  //   if (new Date() > new Date('2022-04-05T20:15:00.000Z')) {
+  //     return 'TimeIsUp'
+  //   } else {
+  //     return 'Placeholder'
+  //   }
+  // }
 
 }
