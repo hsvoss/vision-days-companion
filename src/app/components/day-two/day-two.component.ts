@@ -12,7 +12,7 @@ export class DayTwoComponent {
   }
 
   calcPlaceholder(): 'Placeholder' | 'TimeIsUp' {
-    if (new Date() > new Date(2022, 4, 19, 13, 45)) {
+    if (new Date() > new Date(2022, 4, 19, 13, 30)) {
       return 'TimeIsUp'
     } else {
       return 'Placeholder'
