@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
+import { Component, Input, OnInit } from '@angular/core';
+import { BreakpointObserver, BreakpointState } from "@angular/cdk/layout";
 
 @Component({
   selector: 'app-session',

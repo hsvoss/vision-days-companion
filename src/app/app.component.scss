@@ -87,7 +87,8 @@
   background-color: transparent;
   display: flex;
   flex-direction: row;
-  height: calc(100vh - #{$header-height});;
+  height: calc(100vh - #{$header-height});
+  ;
 
   img {
     width: 5vw;
@@ -99,6 +100,3 @@
   }
 
 }
-
-
-

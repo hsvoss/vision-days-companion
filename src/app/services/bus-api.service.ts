@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Ride} from "../components/busplan/busplan.component";
-import {BehaviorSubject, interval, Observable} from "rxjs";
-import {defaultData} from "./bus-default";
+import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Ride } from "../components/busplan/busplan.component";
+import { BehaviorSubject, interval, Observable } from "rxjs";
+import { defaultData } from "./bus-default";
 
 
 @Injectable({
@@ -19,7 +19,7 @@ export class BusApiService {
   constructor(private http: HttpClient) {
   }
 
-  public startCallCyle() {
+  public startCallCycle() {
 
     this.connection = 'initial'
     const filteredDefault = defaultData.filter(rides => rides.departure.getTime() > new Date().getTime());

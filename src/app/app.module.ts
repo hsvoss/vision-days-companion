@@ -1,28 +1,28 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {ServiceWorkerModule} from '@angular/service-worker';
-import {environment} from '../environments/environment';
-import {DayOneComponent} from './components/day-one/day-one.component';
-import {DayTwoComponent} from './components/day-two/day-two.component';
-import {DayThreeComponent} from './components/day-three/day-three.component';
-import {LocationComponent} from './components/location/location.component';
-import {NavigationComponent} from './components/technical/navigation/navigation.component';
-import {SideDrawerComponent} from "./components/technical/side-drawer/side-drawer.component";
-import {BlockComponent} from './components/technical/block/block.component';
-import {TabsComponent} from './components/technical/tabs/tabs.component';
-import {TabComponent} from './components/technical/tab/tab.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {SessionComponent} from './components/technical/session/session.component';
-import {ImpressumComponent} from './components/technical/impressum/impressum.component';
-import {NgxSpinnerModule} from "ngx-spinner";
-import {InstallPromptComponent} from './components/technical/ios-promt/install-prompt.component';
-import {FaqComponent} from './components/faq/faq.component';
-import {BusplanComponent} from './components/busplan/busplan.component';
-import {HttpClientModule} from "@angular/common/http";
-import {OptOutComponent} from './components/opt-out/opt-out.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { DayOneComponent } from './components/day-one/day-one.component';
+import { DayTwoComponent } from './components/day-two/day-two.component';
+import { DayThreeComponent } from './components/day-three/day-three.component';
+import { LocationComponent } from './components/location/location.component';
+import { NavigationComponent } from './components/technical/navigation/navigation.component';
+import { SideDrawerComponent } from "./components/technical/side-drawer/side-drawer.component";
+import { BlockComponent } from './components/technical/block/block.component';
+import { TabsComponent } from './components/technical/tabs/tabs.component';
+import { TabComponent } from './components/technical/tab/tab.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SessionComponent } from './components/technical/session/session.component';
+import { ImpressumComponent } from './components/technical/impressum/impressum.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { InstallPromptComponent } from './components/technical/ios-promt/install-prompt.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { BusplanComponent } from './components/busplan/busplan.component';
+import { HttpClientModule } from "@angular/common/http";
+import { OptOutComponent } from './components/opt-out/opt-out.component';
 
 @NgModule({
   declarations: [

@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {SwUpdate, UpdateAvailableEvent} from "@angular/service-worker";
-import {NgxSpinnerService} from "ngx-spinner";
+import { Injectable } from '@angular/core';
+import { SwUpdate, UpdateAvailableEvent } from "@angular/service-worker";
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Injectable({
   providedIn: 'root'

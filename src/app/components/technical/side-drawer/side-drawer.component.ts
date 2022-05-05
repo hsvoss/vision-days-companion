@@ -1,6 +1,6 @@
-import {Component, HostListener, ViewEncapsulation} from '@angular/core';
-import {DrawerService} from 'src/app/services/drawer.service';
-import {Observable} from 'rxjs';
+import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { DrawerService } from 'src/app/services/drawer.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-side-drawer',

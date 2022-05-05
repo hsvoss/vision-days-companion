@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {PromptUpdateService} from "./services/prompt-update.service";
-import {CheckForUpdateService} from "./services/check-for-update.service";
-import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
-import {DrawerService} from "./services/drawer.service";
+import { Component, OnInit } from '@angular/core';
+import { PromptUpdateService } from "./services/prompt-update.service";
+import { CheckForUpdateService } from "./services/check-for-update.service";
+import { BreakpointObserver, BreakpointState } from "@angular/cdk/layout";
+import { DrawerService } from "./services/drawer.service";
 
 @Component({
   selector: 'app-root',
@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
   widescreenMode: boolean = true;
 
   constructor(private promptUpdateService: PromptUpdateService,
-              private checkForUpdateService: CheckForUpdateService,
-              public breakpointObserver: BreakpointObserver,
-              private drawerService: DrawerService) {
+    private checkForUpdateService: CheckForUpdateService,
+    public breakpointObserver: BreakpointObserver,
+    private drawerService: DrawerService) {
   }
 
 

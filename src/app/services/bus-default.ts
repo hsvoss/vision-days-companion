@@ -1,4 +1,4 @@
-import {Ride} from "../components/busplan/busplan.component";
+import { Ride } from "../components/busplan/busplan.component";
 
 function makeDateToDay(date: Date): Date {
   const today = new Date();

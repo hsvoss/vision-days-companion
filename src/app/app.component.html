@@ -1,6 +1,6 @@
 <div class="header">
   <img alt="Logo" class="logo-img" src="/assets/theme/Vision-Days.png" routerLink="/" routerLinkActive="active"
-       [routerLinkActiveOptions]={exact:true} (click)="onClick()">
+    [routerLinkActiveOptions]={exact:true} (click)="onClick()">
   <span (click)="toggleSidebar()" *ngIf="!widescreenMode">
     <img alt="menu" height="100%" src="/assets/icons/burger.svg">
   </span>
@@ -19,6 +19,7 @@
     </div>
   </app-side-drawer>
 </div>
-<ngx-spinner [fullScreen]="true" size="large" type="ball-pulse"><p style="color: white"> Updating... </p></ngx-spinner>
+<ngx-spinner [fullScreen]="true" size="large" type="ball-pulse">
+  <p style="color: white"> Updating... </p>
+</ngx-spinner>
 <app-install-prompt></app-install-prompt>
-
