@@ -1,6 +1,6 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {BusApiService} from "../../services/bus-api.service";
-import {Subscription} from "rxjs";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BusApiService } from "../../services/bus-api.service";
+import { Subscription } from "rxjs";
 
 export interface Ride {
   nameLine: string;
@@ -29,7 +29,7 @@ export class BusplanComponent implements OnInit, OnDestroy {
   }
 
   async ngOnInit(): Promise<void> {
-    this.subscription = this.busApiService.startCallCyle();
+    this.subscription = this.busApiService.startCallCycle();
   }
 
 

@@ -11,8 +11,8 @@
   </div>
   <div (click)="toggleCollapse()" *ngIf="room !=='' || speaker !=='' || end !==''" class="footer">
     <div class="room">{{room}}</div>
-    <div *ngIf="speakerLong !== undefined && speakerLong !=='' && allowLongSpeaker; else shortSpeaker"
-         class="speaker">{{speakerLong}}</div>
+    <div *ngIf="speakerLong !== undefined && speakerLong !=='' && allowLongSpeaker; else shortSpeaker" class="speaker">
+      {{speakerLong}}</div>
     <ng-template #shortSpeaker>
       <div class="speaker">{{speaker}}</div>
     </ng-template>

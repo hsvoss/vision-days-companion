@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {DrawerService} from "../../../services/drawer.service";
+import { Component } from '@angular/core';
+import { DrawerService } from "../../../services/drawer.service";
 
 @Component({
   selector: 'app-navigation',

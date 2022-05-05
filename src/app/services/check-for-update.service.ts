@@ -1,6 +1,6 @@
-import {ApplicationRef, Injectable, isDevMode} from '@angular/core';
-import {SwUpdate} from "@angular/service-worker";
-import {concat, first, interval, Observable} from "rxjs";
+import { ApplicationRef, Injectable, isDevMode } from '@angular/core';
+import { SwUpdate } from "@angular/service-worker";
+import { concat, first, interval, Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'

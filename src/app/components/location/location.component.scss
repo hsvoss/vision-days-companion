@@ -7,7 +7,58 @@
   gap: 1vh;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin-top: 2vh;
   margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-top: 0.5vh;
+  column-gap: 0.5rem;
+
+  p,
+  a {
+    margin: 0.5vh 0;
+  }
+
+  img {
+    height: calc(16px + 2vh);
+    width: auto;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .grid {
+    img {
+      height: calc(18px + 2vh);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    img {
+      height: calc(20px + 2vh);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    img {
+      height: calc(22px + 2vh);
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .grid {
+    img {
+      height: calc(24px + 2vh);
+    }
+  }
 }
