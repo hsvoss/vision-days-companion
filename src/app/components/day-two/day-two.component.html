@@ -16,16 +16,28 @@
     euren <b>Personalausweis</b> oder Pass mit.</p>
 </app-block>
 
-<app-block beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik" speaker="Florian Grolman">
+<app-block [collapsible]="true" beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik"
+  speaker="Florian Grolman">
+  <app-session heading="Gruppenaufteilung">
+    <div *ngFor="let person of persons">
+      {{person.lastName}}, {{person.firstName}}: Gruppe {{person.group}}
+    </div>
+    <p>
+    </p>
+  </app-session>
+
+  <div class="horizontal-line"></div>
 </app-block>
+
+
 <app-block beginn="13:00" class="food" end="14:00" heading="Mittagessen" room="Restaurant" speaker="Buffet im Hotel">
 </app-block>
 
-<app-block beginn="14:00" end="15:00" heading="Rhythmische Sportgymnastik" room="Atlantik" speaker="Uwe & Niels"
-  speakerLong="Uwe Backes & Niels Droste"></app-block>
+<app-block *ngIf="calcPlaceholder() === 'Placeholder'" beginn="14:00" end="15:00" heading="Rhythmische Sportgymnastik"
+  room="Atlantik" speaker="Uwe & Niels" speakerLong="Uwe Backes & Niels Droste"></app-block>
 
-<!--<app-block beginn="14:00" end="15:00" heading="Drum Conversation"-->
-<!--           room="Atlantik" speaker="Dressler & Seck" speakerLong="Florian Dressler & Ismael Seck"></app-block>-->
+<app-block *ngIf="calcPlaceholder() === 'TimeIsUp'" beginn="14:00" end="15:00" heading="Drum Conversation"
+  room="Atlantik" speaker="Dressler & Seck" speakerLong="Florian Dressler & Ismael Seck"></app-block>
 
 <app-block beginn="15:00" end="17:50" heading="World Café: Quo vadis VISION?" room="Atlantik" speaker="Florian Grolman">
   <app-session beginn="16:00 - 16:30" class="food" heading="Kaffeepause"></app-session>
