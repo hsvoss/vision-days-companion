@@ -16,8 +16,20 @@
     euren <b>Personalausweis</b> oder Pass mit.</p>
 </app-block>
 
-<app-block beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik" speaker="Florian Grolman">
+<app-block [collapsible]="true" beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik"
+  speaker="Florian Grolman">
+  <app-session heading="Gruppenaufteilung">
+    <div *ngFor="let person of persons">
+      {{person.lastName}}, {{person.firstName}}: Gruppe {{person.group}}
+    </div>
+    <p>
+    </p>
+  </app-session>
+
+  <div class="horizontal-line"></div>
 </app-block>
+
+
 <app-block beginn="13:00" class="food" end="14:00" heading="Mittagessen" room="Restaurant" speaker="Buffet im Hotel">
 </app-block>
 
