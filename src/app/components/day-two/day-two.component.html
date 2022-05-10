@@ -19,7 +19,7 @@
 <app-block [collapsible]="true" beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik"
   speaker="Florian Grolman">
   <app-session heading="Gruppenaufteilung">
-    <div *ngFor="let person of persons">
+    <div *ngFor="let person of personsWorldCafe">
       {{person.lastName}}, {{person.firstName}}: Gruppe {{person.group}}
     </div>
     <p>

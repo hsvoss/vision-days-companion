@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DayTwoComponent {
 
-  persons: { lastName: string, firstName: string, group: number }[] = [
+  personsWorldCafe: { lastName: string, firstName: string, group: number }[] = [
     { lastName: 'Dannenberg', firstName: 'Matthias', group: 1 },
     { lastName: 'Homey', firstName: 'Tobias', group: 1 },
     { lastName: 'Ari', firstName: 'Ahmettug', group: 1 },
