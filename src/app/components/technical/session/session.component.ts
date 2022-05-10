@@ -1,10 +1,25 @@
-import { Component, Input, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from "@angular/cdk/layout";
+import { Component, Input, OnInit } from '@angular/core';
+import { animate, AUTO_STYLE, state, style, transition, trigger } from "@angular/animations";
 
+const DEFAULT_DURATION: number = 600;
 @Component({
   selector: 'app-session',
   templateUrl: './session.component.html',
-  styleUrls: ['./session.component.scss']
+  styleUrls: ['./session.component.scss'],
+  animations: [trigger('collapse', [
+    state('false', style({ height: AUTO_STYLE, visibility: AUTO_STYLE })),
+    state('true', style({ height: '0', visibility: 'hidden' })),
+    transition('false => true', animate(DEFAULT_DURATION + 'ms ease-in')),
+    transition('true => false', animate(DEFAULT_DURATION + 'ms ease-out'))
+  ]),
+  trigger('rotate', [
+    state('false', style({ transform: 'rotate(0)' })),
+    state('true', style({ transform: 'rotate(-90deg)' })),
+    transition('false => true', animate(DEFAULT_DURATION + 'ms ease-in')),
+    transition('true => false', animate(DEFAULT_DURATION + 'ms ease-out'))
+  ])
+  ]
 })
 export class SessionComponent implements OnInit {
 
@@ -16,6 +31,7 @@ export class SessionComponent implements OnInit {
   @Input() room: string = "";
 
   @Input() collapsible: boolean = false;
+  collapsed: boolean = false;
 
   allowLongSpeaker: boolean = false;
 
@@ -23,6 +39,7 @@ export class SessionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.collapsed = this.collapsible;
     this.breakpointObserver
       .observe(['(min-width: 470px)'])
       .subscribe((state: BreakpointState) => {
@@ -30,5 +47,10 @@ export class SessionComponent implements OnInit {
       });
   }
 
+  toggleCollapse() {
+    if (this.collapsible) {
+      this.collapsed = !this.collapsed;
+    }
+  }
 
 }

@@ -14,18 +14,25 @@
   <p>Wir unternehmen einen Spaziergang durch den Tiergarten und besichtigen die Reichstagskuppel.
     Dazu treffen wir uns in der Lobby und laufen um 8:30 Uhr gemeinsam los. Bitte tragt adäquates Schuhwerk und bringt
     euren <b>Personalausweis</b> oder Pass mit.</p>
+
+  <app-session [collapsible]="true" heading="Teilnehmer">
+    <div *ngFor="let person of personsReichstag">
+      {{person.lastName}}, {{person.firstName}}
+    </div>
+    <p>
+    </p>
+  </app-session>
+  <div class="horizontal-line"></div>
 </app-block>
 
-<app-block [collapsible]="true" beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik"
-  speaker="Florian Grolman">
-  <app-session heading="Gruppenaufteilung">
+<app-block beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik" speaker="Florian Grolman">
+  <app-session [collapsible]="true" heading="Gruppenaufteilung">
     <div *ngFor="let person of personsWorldCafe">
       {{person.lastName}}, {{person.firstName}}: Gruppe {{person.group}}
     </div>
     <p>
     </p>
   </app-session>
-
   <div class="horizontal-line"></div>
 </app-block>
 
