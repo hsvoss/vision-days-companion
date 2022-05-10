@@ -1,14 +1,21 @@
-<div class="header" [class.collapsible]="collapsible">
-  <h2>{{heading}}</h2>
-  <div class="time">{{beginn}}</div>
-</div>
-<ng-content></ng-content>
-<div *ngIf="room !=='' || speaker !=='' || end !==''" class="footer">
-  <div class="room">{{room}}</div>
-  <div *ngIf="speakerLong !== undefined && speakerLong !=='' && allowLongSpeaker; else shortSpeaker" class="speaker">
-    {{speakerLong}}</div>
-  <ng-template #shortSpeaker>
-    <div class="speaker">{{speaker}}</div>
-  </ng-template>
-  <div class="time">{{end}}</div>
+<div [class.collapsible]="collapsible">
+  <div (click)="toggleCollapse()" class="header">
+    <div>
+      <img *ngIf="collapsible" [@rotate]="collapsed" alt="carret" src="/assets/icons/angle-down-solid.svg">
+      <h1>{{heading}}</h1>
+    </div>
+    <div class="time">{{beginn}}</div>
+  </div>
+  <div class="content-wrapper" [@collapse]="collapsed" [class.collapsible]="collapsible">
+    <ng-content></ng-content>
+  </div>
+  <div (click)="toggleCollapse()" *ngIf="room !=='' || speaker !=='' || end !==''" class="footer">
+    <div class="room">{{room}}</div>
+    <div *ngIf="speakerLong !== undefined && speakerLong !=='' && allowLongSpeaker; else shortSpeaker" class="speaker">
+      {{speakerLong}}</div>
+    <ng-template #shortSpeaker>
+      <div class="speaker">{{speaker}}</div>
+    </ng-template>
+    <div class="time">{{end}}</div>
+  </div>
 </div>

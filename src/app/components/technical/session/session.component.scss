@@ -44,10 +44,41 @@
     display: flex
   }
 
-
   img {
-    height: 5vh;
+    margin: 1vh 0 1vh 0;
+    height: 22px;
+    width: auto;
+    z-index: 0;
   }
+
+  @media (min-width: 576px) {
+    img {
+      height: 24px;
+      width: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    img {
+      height: 26px;
+      width: auto;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    img {
+      height: 34px;
+      width: auto;
+    }
+  }
+
 
   .time {
     margin: 1vh 1vw;
