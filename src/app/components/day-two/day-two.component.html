@@ -16,7 +16,7 @@
     euren <b>Personalausweis</b> oder Pass mit.</p>
 
   <app-session [collapsible]="true" heading="Teilnehmer">
-    <div *ngFor="let person of personsReichstag">
+    <div *ngFor="let person of getReichtagsPersons()">
       {{person.lastName}}, {{person.firstName}}
     </div>
     <p>
@@ -27,7 +27,7 @@
 
 <app-block beginn="11:00" end="13:00" heading="Einführung World Café" room="Atlantik" speaker="Florian Grolman">
   <app-session [collapsible]="true" heading="Gruppenaufteilung">
-    <div *ngFor="let person of personsWorldCafe">
+    <div *ngFor="let person of getWorldCafePersons()">
       {{person.lastName}}, {{person.firstName}}: Gruppe {{person.group}}
     </div>
     <p>
