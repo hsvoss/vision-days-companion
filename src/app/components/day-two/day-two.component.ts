@@ -67,7 +67,8 @@ export class DayTwoComponent {
     { lastName: 'Weigand', firstName: 'Christine' },
     { lastName: 'Weise', firstName: 'Eric' },
     { lastName: 'Wiese', firstName: 'Jessica' },
-    { lastName: 'Zumbach', firstName: 'Volker' }
+    { lastName: 'Zumbach', firstName: 'Volker' },
+    { lastName: 'Brückner', firstName: 'Alexandra' }
   ].sort((p1, p2) => p1.lastName.localeCompare(p2.lastName))
 
   personsWorldCafe: { lastName: string, firstName: string, group: number }[] = [
