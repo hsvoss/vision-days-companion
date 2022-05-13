@@ -4,7 +4,6 @@
 :host {
   border-top: 3px solid $blue-light;
   padding-left: calc(22px + 1vw);
-  padding-right: calc(22px + 1vw);
 
   display: flex;
   flex-direction: column;
@@ -105,6 +104,10 @@
   display: flex;
   flex-direction: column;
   padding: 0 1vw;
+}
+
+.content-wrapper ::ng-deep p {
+  padding-right: calc(22px + 1vw);
 }
 
 .collapsible {
